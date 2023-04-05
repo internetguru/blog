@@ -5,8 +5,6 @@ tags:
     - flow
 ---
 
-# Introducing Flow: A CLI tool for git flow
-
 As a developer, you understand the importance of maintaining a branching model. That's where Flow comes in. It's a CLI developer tool that simplifies the process of maintaining a project on a branching model.
 
 <!-- more -->
