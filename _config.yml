@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Internet Guru Blog
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: George Pavelka
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://internetguru.github.io/blog
+url: https://internetguru.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -103,3 +103,12 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+tag_generator:
+  enable_index_page: false
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
