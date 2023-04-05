@@ -3,7 +3,7 @@
   <entry>
     <title>Introducing Flow: A CLI tool for git flow</title>
     <url>/2023/04/05/Introducing-Flow-A-CLI-tool-for-git-flow/</url>
-    <content><![CDATA[<h1 id="Introducing-Flow-A-CLI-tool-for-git-flow"><a href="#Introducing-Flow-A-CLI-tool-for-git-flow" class="headerlink" title="Introducing Flow: A CLI tool for git flow"></a>Introducing Flow: A CLI tool for git flow</h1><p>As a developer, you understand the importance of maintaining a branching model. That’s where Flow comes in. It’s a CLI developer tool that simplifies the process of maintaining a project on a branching model.</p>
+    <content><![CDATA[<p>As a developer, you understand the importance of maintaining a branching model. That’s where Flow comes in. It’s a CLI developer tool that simplifies the process of maintaining a project on a branching model.</p>
 <span id="more"></span>
 
 <p>Flow helps to reduce human errors and streamline your workflow, allowing you to focus on what really matters – developing high-quality software. Flow offers a wide range of features arising from using it on our small-to-bigger projects over years.</p>
@@ -38,7 +38,7 @@
   <entry>
     <title>Version handling with Flow</title>
     <url>/2023/04/05/Version-handling-with-Flow/</url>
-    <content><![CDATA[<h1 id="Version-handling-with-Flow"><a href="#Version-handling-with-Flow" class="headerlink" title="Version handling with Flow"></a>Version handling with Flow</h1><p>In the branching models, version numbers play a crucial role. Flow is a powerful CLI developer tool to stick a software project to a branching model. In addition Flow offers robust version handling and ensures that your version numbers are always in compliance with the model.</p>
+    <content><![CDATA[<p>In the branching models, version numbers play a crucial role. Flow is a powerful CLI developer tool to stick a software project to a branching model. In addition Flow offers robust version handling and ensures that your version numbers are always in compliance with the model.</p>
 <span id="more"></span>
 
 <h2 id="Validation-and-compliance"><a href="#Validation-and-compliance" class="headerlink" title="Validation and compliance"></a>Validation and compliance</h2><p>Flow ensures all versions in the branching model are present and compliant with the branching model. For example, the development version must be greater than the staging version, and the (unreleased) staging version must be greater than the stable version.</p>
