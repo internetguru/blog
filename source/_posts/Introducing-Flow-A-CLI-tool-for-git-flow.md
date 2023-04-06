@@ -1,6 +1,7 @@
 ---
 title: 'Introducing Flow: A CLI tool for git flow'
 date: 2023-04-05 09:14:00
+coauthor: George Pavelka
 tags:
     - flow
 ---
