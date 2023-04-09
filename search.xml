@@ -1,52 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Introducing Flow: A CLI tool for git flow</title>
-    <url>/2023/04/05/Introducing-Flow-A-CLI-tool-for-git-flow/</url>
-    <content><![CDATA[<p>As a developer, you understand the importance of maintaining a branching model. That’s where Flow comes in. It’s a CLI developer tool that simplifies the process of maintaining a project on a branching model.</p>
+    <title>Handle Changelog with Flow</title>
+    <url>/2023/04/08/flow-changelog/</url>
+    <content><![CDATA[<p>A good changelog is a quality indicator of well-managed software. Flow is a command-line interface (CLI) tool designed to help in following a branching model and advance in it. Among other things Flow helps maintain the changelog.</p>
 <span id="more"></span>
 
-<p>Flow helps to reduce human errors and streamline your workflow, allowing you to focus on what really matters – developing high-quality software. Flow offers a wide range of features arising from using it on our small-to-bigger projects over years.</p>
-<h2 id="Git-Flow-Automation"><a href="#Git-Flow-Automation" class="headerlink" title="Git Flow Automation"></a>Git Flow Automation</h2><p>The Flow automation features simplify branching tasks by providing default actions and advising users on next steps. It also supports parallel hotfixing and creates GitHub pull requests instead of direct releases.</p>
+<p>Following the <a href="https://keepachangelog.com/en/">Keep a changelog</a> convention, Flow adds or modifies lines in changelog according to each action. It validates its structure and offers corrections if it is invalid.</p>
+<h2 id="Validation-and-conform-feature"><a href="#Validation-and-conform-feature" class="headerlink" title="Validation and conform feature"></a>Validation and conform feature</h2><p>Before anything else, Flow validates changelog on each key branch. It not only checks for its presence, but also looks for required stamps that each changelog has to contain in order to be compliant with the branching model.</p>
+<p>Most detected irregularities can be resolved automatically. There is a default structure and a hierarchy of inheritance, with specific entries for each branch added consecutively.</p>
+<h2 id="The-release-process"><a href="#The-release-process" class="headerlink" title="The release process"></a>The release process</h2><p>When the development branch is released, Flow marks the current unreleased section as Release Candidate 1. Flow increments the minor version number on the development branch after releasing and marks it as the new unreleased version.</p>
+<p>Any subsequent release of the development branch increments the release candidate number until the staging branch is released into production. Only after the staging is released, Flow creates the new version release, resetting the Release Candidate number to 1.</p>
+<h2 id="Features-and-hotfixes"><a href="#Features-and-hotfixes" class="headerlink" title="Features and hotfixes"></a>Features and hotfixes</h2><p>Upon releasing a feature, Flow prompts for a changelog entry describing the feature. There is a list of commits from the feature branch as a memory refresher. Flow also offers available keywords with the default ‘Added’ and adds an automatic entry if skipped.</p>
+<p>The same applies when releasing a hotfix. In such a case, the default changelog keyword is ‘Fixed’. In addition to features, Flow adds a changelog stamp because the patch version was incremented. Read more about <a href="/2023/04/05/flow-version/" title="Version handling with Flow">version handling with Flow</a>.</p>
+<h2 id="Try-Flow-today"><a href="#Try-Flow-today" class="headerlink" title="Try Flow today"></a>Try Flow today</h2><p>Flow has been instrumental in helping our team manage projects more efficiently for several years, allowing us to deliver high-quality software to our clients. We believe that this tool can do the same for you and your team.</p>
+<p>If interested, feel free to <a href="https://github.com/internetguru/flow">download Flow from GitHub</a>. Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.</p>
+]]></content>
+      <tags>
+        <tag>flow</tag>
+        <tag>changelog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maintain a branching model with Flow</title>
+    <url>/2023/04/05/flow-intro/</url>
+    <content><![CDATA[<p>Software development is a continuous process. Maintaining a branching model can be demanding and time consuming. That’s where Flow comes in. It’s a command-line developer tool that automates tasks of maintaining and advancing a project on git branching models.</p>
+<span id="more"></span>
+
+<p>Flow helps to reduce human errors and streamlines your workflow. It allows you to focus on developing the software. Flow offers a wide range of features that have arisen from being used on projects of various sizes over years.</p>
+<h2 id="Branching-model-automation"><a href="#Branching-model-automation" class="headerlink" title="Branching model automation"></a>Branching model automation</h2><p>The Flow automation features simplify branching tasks by providing default actions and advising users on next steps. It supports parallel hotfixing and can create GitHub pull requests instead of direct releases.</p>
 <ul>
-<li>It has a simple usage that <em>requires no arguments</em> picking a default action for you.</li>
-<li>It takes you across branches with the flow and advises what to do next.</li>
-<li>It creates GitHub pull requests instead of releasing directly when asked.</li>
-<li>It maintains separate production branches for major versions, such as <code>prod-1</code>.</li>
-<li>It supports parallel hotfixing, even for separate production branches.</li>
+<li>Flow requires <em>no arguments</em> and derives a default action.</li>
+<li>Flow switches between branches accordingly and advises what to do next.</li>
+<li>Flow can create pull requests instead of releasing directly.</li>
+<li>Flow maintains separate production branches for major versions, such as <code>prod-1</code>.</li>
+<li>Flow supports parallel hotfixing, even for separate production branches.</li>
 </ul>
-<h2 id="Branching-Model-Validation"><a href="#Branching-Model-Validation" class="headerlink" title="Branching Model Validation"></a>Branching Model Validation</h2><p>The validation features ensure project conformity to the branching model, manage semantic versioning, and track release history.</p>
+<h2 id="Branching-model-validation"><a href="#Branching-model-validation" class="headerlink" title="Branching model validation"></a>Branching model validation</h2><p>The validation feature ensures that your project is compliant with a branching model. Flow handles semantic versioning, and keeps track of the release history.</p>
 <ul>
-<li>It validates and automatically <em>fixes projects</em> to conform to the branching model.</li>
-<li>It pulls and pushes all key model branches and checks whether local branches are not behind.</li>
-<li>It handles <a href="https://semver.org/">semantic versioning</a> across all key branches.</li>
-<li>It keeps track of a release history with the <a href="https://keepachangelog.com/en">Keep a CHANGELOG</a> convention.</li>
+<li>Flow validates and automatically <em>fixes project structures</em> to conform to the branching model.</li>
+<li>Flow pulls and pushes all key branches and checks whether local branches are not behind.</li>
+<li>Flow handles <a href="https://semver.org/">semantic versioning</a> across all key branches. Read more about <a href="/2023/04/05/flow-version/" title="Version handling with Flow">version handling with Flow</a>.</li>
+<li>Flow keeps track of a release history with the <a href="https://keepachangelog.com/en/">Keep a CHANGELOG</a> convention. Read more about <a href="/2023/04/08/flow-changelog/" title="Handle Changelog with Flow">changelog handling with Flow</a>.</li>
 </ul>
-<h2 id="Setup-and-Configuration"><a href="#Setup-and-Configuration" class="headerlink" title="Setup and Configuration"></a>Setup and Configuration</h2><p>The Setup and Configuration features facilitate the branching model setup, repository conversion, and pre-existing branch adaptation.</p>
+<h2 id="Setup-and-configuration"><a href="#Setup-and-configuration" class="headerlink" title="Setup and configuration"></a>Setup and configuration</h2><p>Flow can be initiated in any folder with or without files and in any existing git repository. Flow will adapt and preserve existing branches.</p>
 <ul>
-<li>It can initiate a git flow branching repository on any selected folder.</li>
-<li>It can convert an existing git repository into a git flow branching model.</li>
-<li>It automatically adapts to pre-existing branches, such as ‘release’ instead of the default ‘staging’.</li>
+<li>Flow can initiate a git branching repository in any folder with or without files.</li>
+<li>Flow can convert any existing git repository to a git branching model.</li>
+<li>Flow automatically adapts to existing branches, such as ‘release’ instead of the default ‘staging’.</li>
 </ul>
-<h2 id="Give-Flow-a-chance"><a href="#Give-Flow-a-chance" class="headerlink" title="Give Flow a chance"></a>Give Flow a chance</h2><p>Flow has been instrumental in helping our team manage projects more efficiently for several years, allowing us to deliver high-quality software to our clients. We believe that this tool can do the same for you and your team.</p>
-<p>If you’re interested in trying Flow for yourself, you can download it from GitHub. We welcome any feedback, suggestions, or contributions you may have, and we look forward to hearing from you.</p>
+<h2 id="Try-Flow-today"><a href="#Try-Flow-today" class="headerlink" title="Try Flow today"></a>Try Flow today</h2><p>Flow has been instrumental in helping our team manage projects more efficiently for several years, allowing us to deliver high-quality software to our clients. We believe that this tool can do the same for you and your team.</p>
+<p>If interested, feel free to <a href="https://github.com/internetguru/flow">download Flow from GitHub</a>. Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.</p>
 ]]></content>
       <tags>
         <tag>flow</tag>
       </tags>
   </entry>
   <entry>
-    <title>Version handling with Flow</title>
-    <url>/2023/04/05/Version-handling-with-Flow/</url>
-    <content><![CDATA[<p>In the branching models, version numbers play a crucial role. Flow is a powerful CLI developer tool to stick a software project to a branching model. In addition Flow offers robust version handling and ensures that your version numbers are always in compliance with the model.</p>
+    <title>Merging branches with Flow</title>
+    <url>/2023/04/08/flow-merging/</url>
+    <content><![CDATA[<p>Git branching models define three key branches: development, staging, and stable. Flow is a command-line developer tool to keep track of those branches and their mutual relations.</p>
 <span id="more"></span>
 
-<h2 id="Validation-and-compliance"><a href="#Validation-and-compliance" class="headerlink" title="Validation and compliance"></a>Validation and compliance</h2><p>Flow ensures all versions in the branching model are present and compliant with the branching model. For example, the development version must be greater than the staging version, and the (unreleased) staging version must be greater than the stable version.</p>
-<p>Not only Flow can verify version numbers, it will report irregularities and suggest fixing them for you. With the ‘conform’ parameter, it will fix missing version files as much as invalid version numbers. It will do so for all key branches consecutively.</p>
-<h2 id="Versions-during-releasing"><a href="#Versions-during-releasing" class="headerlink" title="Versions during releasing"></a>Versions during releasing</h2><p>During the general release process from dev to staging to production, Flow maintains the version being released. However, after releasing dev to staging, Flow automatically increments the minor version on dev for future releases. This also meets the branching model requirements.</p>
-<p>When the development branch is released repeatedly (before the staging branch is released), versions on dev and staging remain the same. However, the release candidate number increases. Read more about changelog handling with Flow.</p>
-<p>Flow automatically increments the patch version number when a hotfix is released. Multiple parallel hotfixes are versioned consecutively in the order of their release. Additionally each hotfix is also released into an appropriate separate stable branch according to its major version.</p>
-<p>In conclusion, Flow’s version handling capabilities make it easy to keep track of your project’s progress and ensure that your version numbers are always in compliance. To try out Flow and learn more about version handling and other features, visit our GitHub page.</p>
+<h2 id="Key-branches"><a href="#Key-branches" class="headerlink" title="Key branches"></a>Key branches</h2><p>Flow ensures that key branches exist and are merged into subordinate branches (stable to staging to development). Any irregularities are reported and offered to be corrected automatically by Flow.</p>
+<p>For example, releasing a hotfix results in subsequent merges to staging and development branches. Similarly, Flow checks for the staging branch being merged into development and offers to fix it for you.</p>
+<p>Flow defines default names for the key branches and lets you specify your own. In existing repositories, Flow automatically adapts to existing branches that match typical naming conventions, such as ‘development’ instead of the default ‘dev’.</p>
+<h2 id="Helper-branches"><a href="#Helper-branches" class="headerlink" title="Helper branches"></a>Helper branches</h2><p>Besides key branches, Flow can recognize feature branches and hotfix branches. In addition to features, merging hotfixes into the stable branch requires additional merging. Flow also checks for potential collisions <em>before</em> the actual merging happens.</p>
+<p>According to branching models, the stable branch needs to be merged with the development and the (unreleased) staging branches. Flow takes care of that automatically, including <a href="/2023/04/05/flow-version/" title="Version handling with Flow">version incrementing</a> and <a href="/2023/04/08/flow-changelog/" title="Handle Changelog with Flow">changelog handling</a>.</p>
+<h2 id="Additional-branches"><a href="#Additional-branches" class="headerlink" title="Additional branches"></a>Additional branches</h2><p>There is a set of production branches that Flow automatically maintains – one for each major version. This is especially handy for continuous deployment. On top of that, Flow supports hotfixing of these branches regardless of their age.</p>
+<p>For consistency purposes, Flow makes sure the staging branch does not completely vanish even after releasing. This benefits continuous deployment again for the sake of running a beta-testing environments.</p>
+<p>Note that Flow also checks whether local branches are behind their remote counterparts. Flow can effortlessly fix this as well.</p>
+<h2 id="Try-Flow-today"><a href="#Try-Flow-today" class="headerlink" title="Try Flow today"></a>Try Flow today</h2><p>Branching models introduce significant overhead in terms of merging and integration. Flow automates these tasks and saves lots of time and unnecessary mistakes. With Flow, you can be sure the project is compliant and you can focus on the development.</p>
+<p>If interested, feel free to <a href="https://github.com/internetguru/flow">download Flow from GitHub</a>. Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.</p>
+]]></content>
+      <tags>
+        <tag>flow</tag>
+        <tag>merging</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Version handling with Flow</title>
+    <url>/2023/04/05/flow-version/</url>
+    <content><![CDATA[<p>In branching models, version numbers play a crucial role. Flow is a command-line developer tool to maintain software projects compliant with a branching model. Additionally, Flow offers robust version handling and ensures that version numbers are always in compliance with the model.</p>
+<span id="more"></span>
+
+<h2 id="Validation-and-compliance"><a href="#Validation-and-compliance" class="headerlink" title="Validation and compliance"></a>Validation and compliance</h2><p>Flow ensures all version files are present and in compliance with the branching model. For example, the development version must be greater than the staging version. The (unreleased) staging version must be greater than the stable version and lower than the development version.</p>
+<p>Not only Flow can verify versions, it will report irregularities and suggest fixing them for you. It offers to fix missing version files as much as invalid version numbers. Flow does this for all key branches consecutively.</p>
+<h2 id="The-release-process"><a href="#The-release-process" class="headerlink" title="The release process"></a>The release process</h2><p>During the general release process from dev to staging to production, Flow manages the version being released. However, after releasing the development branch to staging, Flow automatically increments the minor version on dev for future releases.</p>
+<p>When the development branch is released multiple times (without the staging branch being released), versions on the development and staging branches remain the same. However, the release candidate number increases. Read more about <a href="/2023/04/08/flow-changelog/" title="Handle Changelog with Flow">handling changelog with Flow</a>.</p>
+<h2 id="Hotfixing"><a href="#Hotfixing" class="headerlink" title="Hotfixing"></a>Hotfixing</h2><p>Flow automatically increments the patch version number when a hotfix is released. Multiple parallel hotfixes are versioned consecutively in the order of their actual release.</p>
+<p>When released, hotfixes are merged into the stable branch. Additionally, each hotfix is also released into a corresponding separate production branch based on its major version. Read more about <a href="/2023/04/08/flow-merging/" title="Merging branches with Flow">merging branches with Flow</a>.</p>
+<h2 id="Try-Flow-today"><a href="#Try-Flow-today" class="headerlink" title="Try Flow today"></a>Try Flow today</h2><p>Flow’s version handling capabilities make it easy to keep track of your project’s progress and ensure that your version numbers are always in compliance.</p>
+<p>If interested, feel free to <a href="https://github.com/internetguru/flow">download Flow from GitHub</a>. Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.</p>
 ]]></content>
       <tags>
         <tag>flow</tag>
