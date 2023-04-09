@@ -1,7 +1,6 @@
 ---
 title: flow-cons
 coauthor: George Pavelka
-coauthor: ChatGPT
 tags:
 ---
 
