@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://internetguru.github.io
+url: https://blog.internetguru.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -112,3 +112,6 @@ search:
   field: post
   content: true
   format: html
+
+plugins:
+  - hexo-generator-cname
