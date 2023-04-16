@@ -52,14 +52,14 @@ darkmode: false
 # generator https://realfavicongenerator.net
 # https://realfavicongenerator.net/favicon_result?file_id=p1gth6bt6d1f0790o1ebo13mkksa6#.ZDHFOtLMJD8
 favicon:
-  small: /images/favicon-16x16.png
-  medium: /images/favicon-32x32.png
-  apple_touch_icon: /images/apple-touch-icon.png
-  safari_pinned_tab: /images/safari-pinned-tab.svg
+  small: /icons/favicon-16x16.png
+  medium: /icons/favicon-32x32.png
+  apple_touch_icon: /icons/apple-touch-icon.png
+  safari_pinned_tab: /icons/safari-pinned-tab.svg
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
-custom_logo: /images/favicon-32x32.png
+custom_logo: /icons/favicon-32x32.png
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/about/cclicenses/
