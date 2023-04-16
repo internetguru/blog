@@ -16,9 +16,9 @@ keywords:
     - merging
 ---
 
-Git branching models define three key branches: development, staging, and stable. Flow is a command-line developer tool to keep track of those branches and their mutual relations.
+# Merging branches with Flow
 
-<!-- more -->
+Git branching models define three key branches: development, staging, and stable. Flow is a command-line developer tool to keep track of those branches and their mutual relations.
 
 ## Key branches
 
