@@ -4,39 +4,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+## [0.3.1] - 2023-04-17
+
+### Fixed
+
+- Changelog format and content
+
 ## [0.3.0] - 2023-04-17
 
-## [0.2.0] - RC1
-=======
-## [0.2.0] - 2023-04-17
->>>>>>> master
+### Fixed
 
-## [0.1.0] - RC1
-=======
+- Catalog not showing all content.
+
+## [0.2.0] - 2023-04-17
+
+### Added
+
+- New post about Flow actions.
+
 ## [0.1.0] - 2023-04-17
->>>>>>> master
+
+### Added
+
+- Four posts on Flow.
 
 ### Changed
 
- - Change butterfly theme, add images, consolidate..
+- Change butterfly theme, add images, consolidate..
 
 ## [0.0.0] - 2023-04-17
 
 ### Added
 
- - This CHANGELOG file.
+- This CHANGELOG file.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[0.3.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.1.0...staging
-=======
-[0.2.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.1.0...v0.2.0
->>>>>>> master
-[0.1.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.0.0...staging
-=======
-[0.1.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.0.0...v0.1.0
->>>>>>> master
-[0.0.0]: https://github.com/internetguru/internetguru.github.io/releases/tag/v0.0.0
+[0.3.1]: https://github.com/internetguru/blog/compare/v0.3.0...v0.3.1
+[0.3.0]: https://github.com/internetguru/blog/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/internetguru/blog/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/internetguru/blog/compare/v0.0.0...v0.1.0
+[0.0.0]: https://github.com/internetguru/blog/releases/tag/v0.0.0
