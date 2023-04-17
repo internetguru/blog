@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 <<<<<<< HEAD
-## [Unreleased]
+## [0.2.0] - RC1
 
 ## [0.1.0] - RC1
 =======
@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
  - This CHANGELOG file.
 
 <<<<<<< HEAD
-[Unreleased]: https://github.com/internetguru/internetguru.github.io/compare/staging...dev
+[0.2.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.1.0...staging
 [0.1.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.0.0...staging
 =======
 [0.1.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.0.0...v0.1.0
