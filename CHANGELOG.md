@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+ - Change butterfly theme, add images, consolidate..
+
 ## [0.0.0] - 2023-04-17
 
 ### Added
