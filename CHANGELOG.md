@@ -6,9 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.3.0] - 2023-04-17
 
+### Fixed
+
+ - Catalog not showing all content.
+
 ## [0.2.0] - 2023-04-17
 
+### Added
+
+ - New post about Flow actions.
+
 ## [0.1.0] - 2023-04-17
+
+### Added
+
+ - Four posts on Flow.
 
 ### Changed
 
