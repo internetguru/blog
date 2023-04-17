@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-## [0.3.0] - RC1
+## [0.3.0] - 2023-04-17
 
 ## [0.2.0] - RC1
 =======
@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-[0.3.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.2.0...staging
+[0.3.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.1.0...staging
 =======
 [0.2.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.1.0...v0.2.0
