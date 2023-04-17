@@ -16,9 +16,9 @@ keywords:
     - merging
 ---
 
-In branching models, version numbers play a crucial role. Flow is a command-line developer tool to maintain software projects compliant with a branching model. Additionally, Flow offers robust version handling and ensures that version numbers are always in compliance with the model.
+# Version handling with Flow
 
-<!-- more -->
+In branching models, version numbers play a crucial role. Flow is a command-line developer tool to maintain software projects compliant with a branching model. Additionally, Flow offers robust version handling and ensures that version numbers are always in compliance with the model.
 
 ## Validation and compliance
 
