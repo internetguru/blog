@@ -8,31 +8,31 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
- - Catalog not showing all content.
+- Catalog not showing all content.
 
 ## [0.2.0] - 2023-04-17
 
 ### Added
 
- - New post about Flow actions.
+- New post about Flow actions.
 
 ## [0.1.0] - 2023-04-17
 
 ### Added
 
- - Four posts on Flow.
+- Four posts on Flow.
 
 ### Changed
 
- - Change butterfly theme, add images, consolidate..
+- Change butterfly theme, add images, consolidate..
 
 ## [0.0.0] - 2023-04-17
 
 ### Added
 
- - This CHANGELOG file.
+- This CHANGELOG file.
 
-[0.3.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/internetguru/internetguru.github.io/compare/v0.0.0...v0.1.0
-[0.0.0]: https://github.com/internetguru/internetguru.github.io/releases/tag/v0.0.0
+[0.3.0]: https://github.com/internetguru/blog/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/internetguru/blog/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/internetguru/blog/compare/v0.0.0...v0.1.0
+[0.0.0]: https://github.com/internetguru/blog/releases/tag/v0.0.0
