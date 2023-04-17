@@ -1,10 +1,19 @@
 ---
 title: Version handling with Flow
 date: 2023-04-05 09:15:28
-coauthor: George Pavelka
+copyright_author: George Pavelka
+cover: /images/d9c1cdb7-30dc-4b9b-be3a-94377ef87800.jpeg
+categories: Flow
 tags:
-    - flow
-    - version
+    - cli
+    - git
+    - automation
+    - development
+keywords:
+    - tools
+    - branching
+    - validation
+    - merging
 ---
 
 In branching models, version numbers play a crucial role. Flow is a command-line developer tool to maintain software projects compliant with a branching model. Additionally, Flow offers robust version handling and ensures that version numbers are always in compliance with the model.

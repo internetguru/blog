@@ -1,9 +1,18 @@
 ---
 title: Maintain a branching model with Flow
 date: 2023-04-05 09:14:00
-coauthor: George Pavelka
+copyright_author: George Pavelka
+cover: /images/68278b10-1fe2-4a96-a7f5-3253f2542b23.jpeg
+categories: Flow
 tags:
-    - flow
+    - cli
+    - git
+    - automation
+    - development
+keywords:
+    - tools
+    - branching
+    - validation
 ---
 
 Software development is a continuous process. Maintaining a branching model can be demanding and time consuming. That's where Flow comes in. It's a command-line developer tool that automates tasks of maintaining and advancing a project on git branching models.
