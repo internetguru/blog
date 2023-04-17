@@ -2,7 +2,7 @@
 title: Handle Changelog with Flow
 date: 2023-04-08 13:49:50
 copyright_author: George Pavelka
-cover: /images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg
+cover: /images/73b7686e-6f18-47fd-a581-95da396a6980.jpeg
 categories: Flow
 tags:
     - cli
@@ -16,9 +16,9 @@ keywords:
     - changelog
 ---
 
-A good changelog is a quality indicator of well-managed software. Flow is a command-line interface (CLI) tool designed to help in following a branching model and advance in it. Among other things Flow helps maintain the changelog.
+# Handle Changelog with Flow
 
-<!-- more -->
+A good changelog is a quality indicator of well-managed software. Flow is a command-line interface (CLI) tool designed to help in following a branching model and advance in it. Among other things Flow helps maintain the changelog.
 
 Following the [Keep a changelog](https://keepachangelog.com/en/) convention, Flow adds or modifies lines in changelog according to each action. It validates its structure and offers corrections if it is invalid.
 
