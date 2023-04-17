@@ -1,9 +1,18 @@
 ---
 title: Handle Changelog with Flow
 date: 2023-04-08 13:49:50
-coauthor: George Pavelka
+copyright_author: George Pavelka
+cover: /images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg
+categories: Flow
 tags:
-    - flow
+    - cli
+    - git
+    - automation
+    - development
+keywords:
+    - tools
+    - branching
+    - validation
     - changelog
 ---
 
