@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- Update global styles
+
 ## [0.4.0] - 2023-04-17
 
 ### Changed
