@@ -38,7 +38,7 @@ Any subsequent release of the development branch increments the release candidat
 
 Upon releasing a feature, Flow prompts for a changelog entry describing the feature. There is a list of commits from the feature branch as a memory refresher. Flow also offers available keywords with the default 'Added' and adds an automatic entry if skipped.
 
-```
+```bash
 ❯ flow
 * Merge feature 'json-format' into 'dev'? [YES/No] yes
 
