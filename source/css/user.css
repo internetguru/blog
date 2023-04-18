@@ -6,12 +6,17 @@
 }
 body {
     --global-font-size: 1em;
+    line-height: 1.5;
 }
 #article-container pre {
     color: #333;
     font-size: 0.9em;
+    line-height: 1.4;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace !important;
 }
 html[data-theme="dark"] #article-container pre {
     color: #cbcbcb;
+}
+html[data-theme="dark"] #aside-content #card-toc .toc-content .toc-link.active {
+    background: #005a54;
 }
