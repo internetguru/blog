@@ -28,13 +28,13 @@ For example, releasing a hotfix results in subsequent merges to staging and deve
 
 Flow defines default names for the key branches and lets you specify your own. In existing repositories, Flow automatically adapts to existing branches that match typical naming conventions, such as 'development' instead of the default 'dev'.
 
-## Helper branches
+## Feature and hotfix branches
 
 Besides key branches, Flow can recognize feature branches and hotfix branches. In addition to features, merging hotfixes into the stable branch requires additional merging. Flow also checks for potential collisions *before* the actual merging happens.
 
 According to branching models, the stable branch needs to be merged with the development and the (unreleased) staging branches. Flow takes care of that automatically, including {% post_link flow-version 'version incrementing' %} and {% post_link flow-changelog 'changelog handling' %}.
 
-## Additional branches
+## Additional production branches
 
 There is a set of production branches that Flow automatically maintains – one for each major version. This is especially handy for continuous deployment. On top of that, Flow supports hotfixing of these branches regardless of their age.
 
