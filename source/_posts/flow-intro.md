@@ -25,7 +25,7 @@ Flow helps to reduce human errors and streamlines your workflow. It allows you t
 
 The Flow automation features simplify branching tasks by providing default actions and advising users on next steps. It supports parallel hotfixing and can create GitHub pull requests instead of direct releases.
 
- - Flow requires *no arguments* and derives a default action.
+ - Flow requires *no arguments* and derives a {% post_link flow-actions 'default action for the current branch' %}.
  - Flow switches between branches accordingly and advises what to do next.
  - Flow can create pull requests instead of releasing directly.
  - Flow maintains separate production branches for major versions, such as `prod-1`.
