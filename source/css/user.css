@@ -4,3 +4,14 @@
 .fa-spin {
     animation: none;
 }
+body {
+    --global-font-size: 1em;
+}
+#article-container pre {
+    color: #333;
+    font-size: 0.9em;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace !important;
+}
+html[data-theme="dark"] #article-container pre {
+    color: #cbcbcb;
+}
