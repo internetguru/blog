@@ -3,7 +3,7 @@ title: Handle Changelog with Flow
 date: 2023-04-08 13:49:50
 copyright_author: George Pavelka
 cover: /images/73b7686e-6f18-47fd-a581-95da396a6980.jpeg
-categories: Flow
+categories: flow
 tags:
     - cli
     - git

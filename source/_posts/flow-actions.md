@@ -3,7 +3,7 @@ title: Flow's action decision tree
 date: 2023-04-16 13:49:31
 copyright_author: George Pavelka
 cover: /images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg
-categories: Flow
+categories: flow
 keywords:
   - tools
   - branching
