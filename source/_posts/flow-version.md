@@ -3,7 +3,7 @@ title: Version handling with Flow
 date: 2023-04-05 09:15:28
 copyright_author: George Pavelka
 cover: /images/d9c1cdb7-30dc-4b9b-be3a-94377ef87800.jpeg
-categories: Flow
+categories: flow
 tags:
     - cli
     - git
