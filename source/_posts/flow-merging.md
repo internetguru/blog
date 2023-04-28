@@ -3,7 +3,7 @@ title: Merging branches with Flow
 date: 2023-04-08 18:44:29
 copyright_author: George Pavelka
 cover: /images/50356bcb-b5bd-4a68-a065-8b8873786730.jpeg
-categories: Flow
+categories: flow
 tags:
     - cli
     - git

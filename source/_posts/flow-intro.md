@@ -3,7 +3,7 @@ title: Maintain a branching model with Flow
 date: 2023-04-05 09:14:00
 copyright_author: George Pavelka
 cover: /images/68278b10-1fe2-4a96-a7f5-3253f2542b23.jpeg
-categories: Flow
+categories: flow
 tags:
     - cli
     - git
