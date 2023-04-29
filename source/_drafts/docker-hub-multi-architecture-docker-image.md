@@ -94,3 +94,11 @@ your-dockerhub-username/your-image-name:tag
 
 Replace `your-dockerhub-username`, `your-image-name`, and `tag` with your Docker Hub username, the name of your image, and the desired tag, respectively. For example `internetguru/academy-java:latest`.
 
+If you are creating image for the Internet Guru Academy Dashboard, then add the following line into the `gitlab-ci.yml` file `variables` section.
+
+```yaml
+variables:
+  - ACADEMY_DOCKER_IMAGE: your-dockerhub-username/your-image-name:tag
+```
+
+TODO tip: define it in variable
