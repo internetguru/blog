@@ -30,7 +30,33 @@ Most detected irregularities can be resolved automatically. There is a default s
 
 ## The release process
 
-When the development branch is released, Flow marks the current unreleased section as Release Candidate 1. Flow increments the minor version number on the development branch after releasing and marks it as the new unreleased version.
+When a staging branch is created, Flow marks the unreleased section as a version release candidate, e.g. '0.1.0-rc1'. Additionally, it creates a new 'Unreleased' section for the dev branch.
+
+``` markdown Before
+## [Unreleased]
+
+### Added
+
+- Entry 1
+- Entry 2
+- Entry 3
+
+...
+```
+
+``` markdown After
+## [Unreleased]
+
+## [0.1.0-rc1] - 2023-04-08
+
+### Added
+
+- Entry 1
+- Entry 2
+- Entry 3
+
+...
+```
 
 Any subsequent release of the development branch increments the release candidate number until the staging branch is released into production. Only after the staging is released, Flow creates the new version release, resetting the Release Candidate number to 1.
 
@@ -38,10 +64,7 @@ Any subsequent release of the development branch increments the release candidat
 
 Upon releasing a feature, Flow prompts for a changelog entry describing the feature. There is a list of commits from the feature branch as a memory refresher. Flow also offers available keywords with the default 'Added' and adds an automatic entry if skipped.
 
-```bash
-❯ flow
-* Merge feature 'json-format' into 'dev'? [YES/No] yes
-
+``` markdown
 ###
 # Enter 'json-format' description for CHANGELOG.md
 #   New line for multiple entries.
