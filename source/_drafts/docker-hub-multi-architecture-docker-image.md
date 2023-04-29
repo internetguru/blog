@@ -78,7 +78,7 @@ docker buildx build --platform linux/amd64,linux/arm64 -t your-dockerhub-usernam
 
 Replace `your-dockerhub-username`, `your-image-name`, and `tag` with your own Docker Hub username, the name of your image, and the desired tag, respectively. You can use `:latest` tag.
 
-This command will build and push the multi-architecture Docker image to your Docker Hub account, making it available for your students to use.
+This command will build and push the multi-architecture Docker image to your [Docker Hub account](https://hub.docker.com/signup), making it available to public.
 
 {% note info %}
 Once the process is complete, you can verify the supported architectures by visiting your image's page on Docker Hub or by using the `docker manifest inspect` command.
