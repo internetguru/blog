@@ -42,13 +42,13 @@ Similarly, the (unreleased) staging version must be greater than the production 
 
 During the general release process, from development to staging to production, Flow preserves the source version value. After the first release candidate is created, Flow automatically increments the minor version on the development branch for future releases.
 
-``` plaintext Before
+``` plaintext Initial
             A prod [0.0.0]
              \
               B---C develop [0.1.0]
 ```
 
-``` plaintext After
+``` plaintext Release develop
             A prod [0.0.0]
              \
               \       D staging [0.1.0]
@@ -56,9 +56,19 @@ During the general release process, from development to staging to production, F
                 B---C develop [0.2.0]
 ```
 
+``` plaintext Release staging
+            A-----------E prod [0.1.0]
+             \         /
+              \       D
+               \     /
+                B---C develop [0.2.0]
+```
+
 When the development branch is released multiple times without releasing the staging branch, versions on the development and staging branches are preserved. However, the release candidate number increments. Read more about {% post_link flow-changelog 'handling changelog with Flow' %}.
 
-Note: The diagrams presented only display relevant information related to the topic at hand. Additional details, such as tags, branches, and commits that occur in the model, are omitted.
+{% note info %}
+The diagrams presented only display relevant information related to the topic at hand. Additional details, including tags, branches, and commits that occur in the process, are omitted.
+{% endnote %}
 
 ## Hotfixing
 
