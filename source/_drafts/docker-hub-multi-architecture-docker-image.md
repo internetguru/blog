@@ -2,6 +2,7 @@
 title: Creating Multi-Architecture Docker Images
 date: 2023-04-29 07:47:00
 copyright_author: Pavel Petrzela
+copyright_author_href: https://www.linkedin.com/in/pavelpetrzela/
 cover: /images/91e6ca16-8bd4-4797-8963-5d7dc57e6dd1.jpeg
 categories: academy
 keywords:
@@ -31,9 +32,13 @@ Docker Buildx is included in Docker Desktop starting from version 19.03. If you 
 
 ## Step 3: Prepare Your Dockerfile
 
-Create a Dockerfile in your project directory, specifying the base image, tools, packages, and configurations required for your course. Make sure that the base image you choose has support for both `arm64` and `amd64` architectures. We recommend to use Internet Guru Academy minimal base image:
+Create a Dockerfile in your project directory, specifying the base image, tools, packages, and configurations required for your course. Make sure that the base image you choose has support for both `arm64` and `amd64` architectures.
 
-```
+{% note info %}
+We recommend to use Internet Guru Academy minimal base image for Dashboard purposes as you can see in the following example.
+{% endnote %}
+
+```dockerfile
 FROM internetguru/academy:latest
 ```
 
@@ -43,13 +48,13 @@ Continue adding the necessary instructions to set up your environment according 
 
 Open a terminal and run the following command to create a new builder instance with multi-architecture support:
 
-```
+```bash
 docker buildx create --name mybuilder
 ```
 
 Then, switch to the new builder instance:
 
-```
+```bash
 docker buildx use mybuilder
 ```
 
@@ -57,7 +62,7 @@ docker buildx use mybuilder
 
 Now, you can build the Docker image for multiple architectures by specifying the `--platform` option with the desired architectures:
 
-```
+```bash
 docker buildx build --platform linux/amd64,linux/arm64 -t your-dockerhub-username/your-image-name:tag --push .
 ```
 
