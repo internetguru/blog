@@ -68,7 +68,7 @@ In addition to features, releasing hotfixes requires additional merging. Accordi
 ``` plaintext Before
               D---E hotfix
              /
-            A prod, staging [0.0.0]
+            A prod [0.0.0]
              \
               B---C develop [0.1.0]
 ```
@@ -76,7 +76,7 @@ In addition to features, releasing hotfixes requires additional merging. Accordi
 ``` plaintext After
               D---E
              /     \
-            A-------F prod, staging [0.0.1]
+            A-------F prod [0.0.1]
              \       \
               B---C---G develop [0.1.0]
 ```
