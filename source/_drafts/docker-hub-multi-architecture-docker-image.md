@@ -35,7 +35,7 @@ Docker Buildx is included in Docker Desktop starting from version 19.03. If you 
 Create a Dockerfile in your project directory, specifying the base image, tools, packages, and configurations required for your course. Make sure that the base image you choose has support for both `arm64` and `amd64` architectures.
 
 {% note info %}
-We recommend to use Internet Guru Academy minimal base image for Dashboard purposes as you can see in the following example.
+We recommend to use [Internet Guru Academy](https://academy.internetguru.io/) minimal [base image for Dashboard](https://hub.docker.com/r/internetguru/academy/tags) purposes as you can see in the following example.
 {% endnote %}
 
 ```dockerfile
