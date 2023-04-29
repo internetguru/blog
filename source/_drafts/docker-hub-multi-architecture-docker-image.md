@@ -2,7 +2,7 @@
 title: Creating Multi-Architecture Docker Images
 date: 2023-04-29 07:47:00
 copyright_author: Pavel Petrzela
-cover: /images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg
+cover: /images/91e6ca16-8bd4-4797-8963-5d7dc57e6dd1.jpeg
 categories: academy
 keywords:
   - academy

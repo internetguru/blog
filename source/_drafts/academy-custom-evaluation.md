@@ -2,7 +2,7 @@
 title: How to Setup Custom Evaluation for Internet Guru Academy
 date: 2023-04-29 07:47:00
 copyright_author: Pavel Petrzela
-cover: /images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg
+cover: /images/77879d7d-7d6d-4fad-ad4a-204511798574.jpeg
 categories: academy
 keywords:
   - academy
