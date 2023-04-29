@@ -18,11 +18,11 @@ keywords:
 
 # Merging branches with Flow
 
-In accordance to typical git branching models, Flow defines key branches, feature and hotfix branches, and individual major branches. It helps developers to keep track of those branches and their mutual relations.
+In accordance with typical git branching models, Flow defines key branches, feature and hotfix branches, and individual major branches. Flow helps developers keep track of those branches and their mutual relations.
 
 ## Merging key branches
 
-Flow ensures that key branches exist and are merged into subordinate branches (production branch to staging, staging to development). Any irregularities are reported and offered to be corrected automatically by Flow. Such as the following bug fixing on staging:
+Flow ensures that key branches exist and are merged into subordinate branches (production branch to staging, staging to development). Flow reports any irregularities and offers to correct them automatically. Such as the following bug fixing on staging:
 
 ``` plaintext Before
                   A---B---C staging
@@ -36,11 +36,11 @@ Flow ensures that key branches exist and are merged into subordinate branches (p
             D---E-----------F develop
 ```
 
-Flow handles more complex merging actions, such as releasing a hotfix. This results in subsequent merges of the hotfix to production branch, production to staging (if not merged), and staging to development branch. It will fix any partial inconsistency as well.
+Flow handles more complex merging actions, such as releasing a hotfix. This results in subsequent merges of the hotfix to production branch, production to staging (if not merged), and staging to development branch. It also fixes any partial inconsistencies.
 
 ## Merging features
 
-Feature branches are only created from and merged to development branch on demand. Flow also checks for potential collisions *before* the actual merging happens.
+Feature branches are created from and merged into the development branch on demand. Flow also checks for potential collisions *before* the actual merging takes place.
 
 
 ``` plaintext Before
@@ -63,7 +63,7 @@ Feature branches are only created from and merged to development branch on deman
 
 ## Merging hotfixes
 
-In addition to features, merging hotfixes requires further merging. According to branching models, the production branch must be merged with the development branch. Flow takes care of that automatically, including {% post_link flow-version 'version incrementing' %} and {% post_link flow-changelog 'changelog handling' %}.
+In addition to features, releasing hotfixes requires additional merging. According to branching models, the production branch must be merged into the development branch. Flow takes care of that automatically, including {% post_link flow-version 'version incrementing' %} and {% post_link flow-changelog 'changelog handling' %}.
 
 ``` plaintext Before
               D---E hotfix
@@ -81,11 +81,11 @@ In addition to features, merging hotfixes requires further merging. According to
               B---C---G develop [0.1.0]
 ```
 
-According to branching models, the production branch must be also merged to an (unreleased) staging branch. Flow takes care of that too.
+According to branching models, the production branch must also be merged into an (unreleased) staging branch. Flow handles this as well.
 
 ## Merging the staging branch
 
-Flow maintains a staging branch initially attached to the production branch. Releasing the development branch results in a separate staging branch designed for bug fixing. All fixes must be merged back to the development branch until the staging branch is released.
+Flow maintains a staging branch initially attached to the production branch. Releasing the development branch creates a separate staging branch designated for bug fixing. All fixes must be merged back into the development branch until the staging branch is released.
 
 ``` plaintext Initial state
             A prod, staging [0.0.0]
@@ -117,7 +117,7 @@ Flow maintains a staging branch initially attached to the production branch. Rel
                 B---C---E---G---I develop [0.2.0]
 ```
 
-Apart from feature and hotfix branches, the staging branch is never removed. It is still present despite being fully merged to production. This allows a consistent CI/CD for the sake of beta-testing.
+Unlike feature and hotfix branches, the staging branch is never removed. It is still present despite being fully merged to production. This allows for consistent CI/CD in the context of beta-testing.
 
 ## Additional production branches
 
@@ -139,10 +139,10 @@ When releasing a staging branch, Flow makes sure there is a corresponding major 
                 B---C---E---G---I develop [1.1.0]
 ```
 
-Note that there still exists a major branch `prod-0` on commit `A` with a version of `[0.0.0]`. When merging a hotfix, Flow picks its corresponding 'major' branch. That means any major version can be hotfixed independently regardless of when the branch or the hotfix was created.
+Note that there still exists a major branch `prod-0` on commit `A` with a version of `[0.0.0]`. When merging a hotfix, Flow selects its corresponding 'major' branch. That means any major version can be hotfixed independently regardless of when the branch or the hotfix was created.
 
 ## Try Flow today
 
-In terms of merging, advanced branching models introduce significant overhead for developers. Flow automates these tasks into a single (often one-word) command. With Flow, you can be sure the project is compliant and you can focus on the development.
+Advanced branching models introduce significant overhead for developers in terms of merging. Flow automates these tasks into a single, often one-word, command. With Flow, you can be sure the project is compliant and you can focus on development.
 
-If interested, feel free to [download Flow from GitHub](https://github.com/internetguru/flow). Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.
+If you're interested, feel free to [download Flow from GitHub](https://github.com/internetguru/flow). Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.
