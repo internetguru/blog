@@ -24,7 +24,7 @@ Creating a [Docker](https://www.docker.com/) image that supports both arm64 and 
 
 ## Step 1: Prepare Your Dockerfile
 
-Create a Dockerfile in your project directory, specifying the base image, tools, packages, and configurations required for your course. Make sure that the base image you choose has support for both `arm64` and `amd64` architectures.
+First, create a Dockerfile in your project directory, specifying the base image, tools, packages, and configurations required for your course. Make sure that the base image you choose has support for both `arm64` and `amd64` architectures.
 
 {% note info %}
 We recommend to use [Internet Guru Academy](https://academy.internetguru.io/) minimal [base image for Dashboard](https://hub.docker.com/r/internetguru/academy/tags) purposes as you can see in the following example.
@@ -48,7 +48,7 @@ Read more about [Dockerfile best practices](https://docs.docker.com/develop/deve
 
 ## Step 2: Install Docker Desktop
 
-First, ensure that you have Docker Desktop installed on your machine. If you haven't, you can download it from the [official Docker website](https://www.docker.com/products/docker-desktop/) and follow the installation instructions for your operating system.
+Ensure that you have Docker Desktop installed on your machine. If you haven't, you can download it from the [official Docker website](https://www.docker.com/products/docker-desktop/) and follow the installation instructions for your operating system.
 
 {% note warning %}
 Docker Buildx is included in Docker Desktop starting from version 19.03. If you have an older version, you may need to install the Buildx plugin manually. Check the Buildx documentation for [installation instructions](https://github.com/docker/buildx#installing).
