@@ -8,7 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.6.0-rc.1] - 2023-04-29
 
-## [0.5.0] - RC1
+### Added
+
+- Added schemes and examples to existing articles.
+- New drafts on IGA.
+- New drafts on Flow.
+
+### Changed
+
+- Review and refactor existing articles on Flow.
 
 ## [0.5.1] - 2023-04-28
 
@@ -64,8 +72,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased]: https://https://github.com/internetguru/blog/compare/staging...dev
 [0.6.0-rc.1]: https://github.com/internetguru/blog/releases/tag/v0.5.1
-[0.5.0]: https://github.com/internetguru/blog/compare/v0.4.0...staging
-[0.5.1]: https://https://github.com/internetguru/blog/compare/v0.5.0...v0.5.1
+[0.5.1]: https://github.com/internetguru/blog/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/internetguru/blog/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/internetguru/blog/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/internetguru/blog/compare/v0.3.0...v0.3.1
