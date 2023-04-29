@@ -5,11 +5,11 @@ copyright_author: Pavel Petrzela
 copyright_author_href: https://www.linkedin.com/in/pavelpetrzela/
 cover: /images/77879d7d-7d6d-4fad-ad4a-204511798574.jpeg
 categories: academy
-keywords:
+tags:
   - academy
   - evaluate
   - tutorial
-tags:
+keywords:
   - Internet Guru Academy
   - docker
   - bash

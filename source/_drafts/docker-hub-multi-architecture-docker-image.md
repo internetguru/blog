@@ -5,11 +5,11 @@ copyright_author: Pavel Petrzela
 copyright_author_href: https://www.linkedin.com/in/pavelpetrzela/
 cover: /images/91e6ca16-8bd4-4797-8963-5d7dc57e6dd1.jpeg
 categories: academy
-keywords:
+tags:
   - academy
   - docker
   - tutorial
-tags:
+keywords:
   - Internet Guru Academy
   - docker
   - image
