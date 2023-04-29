@@ -1,6 +1,6 @@
 ---
 title: Merging branches with Flow
-date: 2023-04-08 18:44:29
+date: 2023-04-12 18:44:29
 copyright_author: George Pavelka
 cover: /images/50356bcb-b5bd-4a68-a065-8b8873786730.jpeg
 categories: flow
@@ -18,32 +18,131 @@ keywords:
 
 # Merging branches with Flow
 
-Git branching models define three key branches: development, staging, and stable. Flow is a command-line developer tool to keep track of those branches and their mutual relations.
+In accordance to typical git branching models, Flow defines key branches, feature and hotfix branches, and individual major branches. It helps developers to keep track of those branches and their mutual relations.
 
-## Key branches
+## Merging key branches
 
-Flow ensures that key branches exist and are merged into subordinate branches (stable to staging to development). Any irregularities are reported and offered to be corrected automatically by Flow.
+Flow ensures that key branches exist and are merged into subordinate branches (production branch to staging, staging to development). Any irregularities are reported and offered to be corrected automatically by Flow. Such as the following bug fixing on staging:
 
-For example, releasing a hotfix results in subsequent merges to staging and development branches. Similarly, Flow checks for the staging branch being merged into development and offers to fix it for you.
+``` plaintext Before
+                  A---B---C staging
+                 /
+            D---E develop
+```
 
-Flow defines default names for the key branches and lets you specify your own. In existing repositories, Flow automatically adapts to existing branches that match typical naming conventions, such as 'development' instead of the default 'dev'.
+``` plaintext After
+                  A---B---C staging
+                 /         \
+            D---E-----------F develop
+```
 
-## Feature and hotfix branches
+Flow handles more complex merging actions, such as releasing a hotfix. This results in subsequent merges of the hotfix to production branch, production to staging (if not merged), and staging to development branch. It will fix any partial inconsistency as well.
 
-Besides key branches, Flow can recognize feature branches and hotfix branches. In addition to features, merging hotfixes into the stable branch requires additional merging. Flow also checks for potential collisions *before* the actual merging happens.
+## Merging features
 
-According to branching models, the stable branch needs to be merged with the development and the (unreleased) staging branches. Flow takes care of that automatically, including {% post_link flow-version 'version incrementing' %} and {% post_link flow-changelog 'changelog handling' %}.
+Feature branches are only created from and merged to development branch on demand. Flow also checks for potential collisions *before* the actual merging happens.
+
+
+``` plaintext Before
+                  A---B---C feature
+                 /
+            D---E---F---G---H develop
+```
+
+``` plaintext During
+                  A---B---C---I feature
+                 /           /
+            D---E---F---G---H develop
+```
+
+``` plaintext After
+                  A---B---C---I
+                 /           / \
+            D---E---F---G---H---J develop
+```
+
+## Merging hotfixes
+
+In addition to features, merging hotfixes requires further merging. According to branching models, the production branch must be merged with the development branch. Flow takes care of that automatically, including {% post_link flow-version 'version incrementing' %} and {% post_link flow-changelog 'changelog handling' %}.
+
+``` plaintext Before
+              D---E hotfix
+             /
+            A prod, staging [0.0.0]
+             \
+              B---C develop [0.1.0]
+```
+
+``` plaintext After
+              D---E
+             /     \
+            A-------F prod, staging [0.0.1]
+             \       \
+              B---C---G develop [0.1.0]
+```
+
+According to branching models, the production branch must be also merged to an (unreleased) staging branch. Flow takes care of that too.
+
+## Merging the staging branch
+
+Flow maintains a staging branch initially attached to the production branch. Releasing the development branch results in a separate staging branch designed for bug fixing. All fixes must be merged back to the development branch until the staging branch is released.
+
+``` plaintext Initial state
+            A prod, staging [0.0.0]
+             \
+              B---C develop [0.1.0]
+```
+
+``` plaintext Release develop
+            A prod [0.0.0]
+             \
+              \       D staging [0.1.0]
+               \     / \
+                B---C---E develop [0.2.0]
+```
+
+``` plaintext Bug fix on staging
+            A prod [0.0.0]
+             \
+              \       D---F staging [0.1.0]
+               \     / \   \
+                B---C---E---G develop [0.2.0]
+```
+
+``` plaintext Release staging
+            A---------------H prod, staging [0.1.0]
+             \             / \
+              \       D---F   \
+               \     / \   \   \
+                B---C---E---G---I develop [0.2.0]
+```
+
+Apart from feature and hotfix branches, the staging branch is never removed. It is still present despite being fully merged to production. This allows a consistent CI/CD for the sake of beta-testing.
 
 ## Additional production branches
 
-There is a set of production branches that Flow automatically maintains – one for each major version. This is especially handy for continuous deployment. On top of that, Flow supports hotfixing of these branches regardless of their age.
+There is a set of production branches that Flow automatically maintains – one for each major version. This allows an independent hotfixing of any major branch anytime in the future.
 
-For consistency purposes, Flow makes sure the staging branch does not completely vanish even after releasing. This benefits continuous deployment again for the sake of running a beta-testing environments.
+When releasing a staging branch, Flow makes sure there is a corresponding major branch. Note that there is always a general staging branch matching the most current major branch. Assume the first and the last state from the previous example releasing a major version of `[1.0.0]` instead of minor `[0.1.0]`.
 
-Note that Flow also checks whether local branches are behind their remote counterparts. Flow can effortlessly fix this as well.
+``` plaintext Initial state
+            A prod, staging, prod-0 [0.0.0]
+             \
+              B---C develop [1.0.0]
+```
+
+``` plaintext Release staging
+            A---------------H prod, staging, prod-1 [1.0.0]
+             \             / \
+              \       D---F   \
+               \     / \   \   \
+                B---C---E---G---I develop [1.1.0]
+```
+
+Note that there still exists a major branch `prod-0` on commit `A` with a version of `[0.0.0]`. When merging a hotfix, Flow picks its corresponding 'major' branch. That means any major version can be hotfixed independently regardless of when the branch or the hotfix was created.
 
 ## Try Flow today
 
-Branching models introduce significant overhead in terms of merging and integration. Flow automates these tasks and saves lots of time and unnecessary mistakes. With Flow, you can be sure the project is compliant and you can focus on the development.
+In terms of merging, advanced branching models introduce significant overhead for developers. Flow automates these tasks into a single (often one-word) command. With Flow, you can be sure the project is compliant and you can focus on the development.
 
 If interested, feel free to [download Flow from GitHub](https://github.com/internetguru/flow). Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.

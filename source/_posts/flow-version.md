@@ -22,21 +22,62 @@ In branching models, version numbers play a crucial role. Flow is a command-line
 
 ## Validation and compliance
 
-Flow ensures all version files are present and in compliance with the branching model. For example, the development version must be greater than the staging version. The (unreleased) staging version must be greater than the stable version and lower than the development version.
+Flow ensures all version files are present and valid. For example, the development major or minor version must be greater than the staging version. Not only Flow can verify versions, it will report irregularities and offer to correct them.
 
-Not only Flow can verify versions, it will report irregularities and suggest fixing them for you. It offers to fix missing version files as much as invalid version numbers. Flow does this for all key branches consecutively.
+
+``` plaintext Before
+            A prod [0.0.0]
+             \
+              B---C develop [0.0.0] (invalid)
+```
+
+``` plaintext After
+            A prod [0.0.0]
+             \
+              B---C develop [0.1.0] (fixed)
+```
+
+Similarly, the (unreleased) staging version must be greater than the production version and lower than the development version. Flow can fix that too including missing version files as well as invalid version format.
 
 ## The release process
 
-During the general release process from dev to staging to production, Flow manages the version being released. However, after releasing the development branch to staging, Flow automatically increments the minor version on dev for future releases.
+During the general release process (from dev to staging to production), Flow preserves the source version value. After a first release candidate is created, Flow automatically increments minor version on dev for future releases.
+
+``` plaintext Before
+            A prod [0.0.0]
+             \
+              B---C develop [0.1.0]
+```
+
+``` plaintext After
+            A prod [0.0.0]
+             \
+              \       D staging [0.1.0]
+               \     /
+                B---C develop [0.2.0]
+```
 
 When the development branch is released multiple times (without the staging branch being released), versions on the development and staging branches remain the same. However, the release candidate number increases. Read more about {% post_link flow-changelog 'handling changelog with Flow' %}.
 
+Note: Schemes only show the most relevant information for the current topic. They are simplified and miss (otherwise important) information such as tags, branches, and even commits that occur during operations like this.
+
 ## Hotfixing
 
-Flow automatically increments the patch version number when a hotfix is released. Multiple parallel hotfixes are versioned consecutively in the order of their actual release.
+When released, the hotfix is merged into the production branch (non-fast-forward). Flow automatically increments the patch version number. It also removes the hotfix branch and prompts for a changelog entry.
 
-When released, hotfixes are merged into the stable branch. Additionally, each hotfix is also released into a corresponding separate production branch based on its major version. Read more about {% post_link flow-merging 'merging branches with Flow' %}.
+``` plaintext Before
+                  A---B---C hotfix [0.1.0]
+                 /
+            D---E prod [0.1.0]
+```
+
+``` plaintext After
+                  A---B---C
+                 /         \
+            D---E-----------F prod [0.1.1]
+```
+
+The hotfix version is not incremented until being merged. That supports multiple parallel hotfixing. Hotfixes are also released into corresponding separate production branches based on their major version. Read more about {% post_link flow-merging 'merging branches with Flow' %}.
 
 ## Try Flow today
 
