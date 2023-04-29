@@ -22,15 +22,7 @@ tags:
 
 Creating a [Docker](https://www.docker.com/) image that supports both arm64 and amd64 architectures can be achieved through the use of Docker Buildx, a CLI plugin that extends the Docker command with the full support of the features provided by [Moby BuildKit](https://github.com/moby/buildkit). Follow the steps below to create a multi-architecture Docker image.
 
-## Step 1: Install Docker Desktop
-
-First, ensure that you have Docker Desktop installed on your machine. If you haven't, you can download it from the [official Docker website](https://www.docker.com/products/docker-desktop/) and follow the installation instructions for your operating system.
-
-{% note warning %}
-Docker Buildx is included in Docker Desktop starting from version 19.03. If you have an older version, you may need to install the Buildx plugin manually. Check the Buildx documentation for [installation instructions](https://github.com/docker/buildx#installing).
-{% endnote %}
-
-## Step 2: Prepare Your Dockerfile
+## Step 1: Prepare Your Dockerfile
 
 Create a Dockerfile in your project directory, specifying the base image, tools, packages, and configurations required for your course. Make sure that the base image you choose has support for both `arm64` and `amd64` architectures.
 
@@ -52,6 +44,14 @@ RUN apt-get update \
 
 {% note info %}
 Read more about [Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
+{% endnote %}
+
+## Step 2: Install Docker Desktop
+
+First, ensure that you have Docker Desktop installed on your machine. If you haven't, you can download it from the [official Docker website](https://www.docker.com/products/docker-desktop/) and follow the installation instructions for your operating system.
+
+{% note warning %}
+Docker Buildx is included in Docker Desktop starting from version 19.03. If you have an older version, you may need to install the Buildx plugin manually. Check the Buildx documentation for [installation instructions](https://github.com/docker/buildx#installing).
 {% endnote %}
 
 ## Step 3: Create a Builder Instance
