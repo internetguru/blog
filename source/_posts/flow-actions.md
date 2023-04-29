@@ -17,34 +17,46 @@ tags:
 
 # Flow's action decision tree
 
-Advancement in branching models is mostly deterministic. That's why branching models often have 'flow' in their names. Internet Guru Flow is a CLI tool for developers designed to automate the flow.
+Advancement in branching models is mostly deterministic. That's why the term 'flow' often appears in branching model names. Internet Guru Flow is a CLI tool for developers designed to automate that flow.
 
-Flow advances (flows) on a branching model. By default it releases the current branch into a proper destination. Let's explore how Flow determines the destination and how you can influence it.
+Flow moves forward (flows) on a branching model. By default, it releases the current branch into the appropriate destination. Let's explore how Flow determines the destination and how you can influence it.
 
 ## Flow key branches
 
-Flow distinguishes three key branches – development, staging, and stable. The development branch is released to the staging branch. The staging branch is released to the stable branch.
+Flow recognizes three key branches: development, staging, and production. These branches 'flow' into each other in that order. Development into staging and staging into production. The production branch can only 'flow' into its hotfix. The same is true for individual 'major' branches (e.g. `prod‑1`) that follow the production branch while matching its major version.
 
-Note: Technically, each of its commits needs to be merged into the development branch. Read more about {% post_link flow-merging 'merging with Flow' %}.
+- Command `flow` on the *develop* branch results into action 'release development branch'.
+- Command `flow` on the *staging* branch results into action 'release staging branch'.
+- Command `flow` on the *production* or *major* branch results into command `flow hotfix` (see below).
 
-By design, the stable branch can only proceed into a hotfix. If Flow runs on a stable branch without an argument, a default hotfix is created.
+Running Flow with a key branch argument results into similar actions. This works regardless of the current branch.
+
+- Command `flow develop` results into action 'release development branch'.
+- Command `flow staging` results into action 'release staging branch'.
+- Command `flow prod` or `flow prod‑1` results into command `flow hotfix` (see below).
 
 ## Flow hotfixes and features
 
-Any other existing branch besides the key branches is considered either a hotfix or a feature. This is determined by its relation to the stable branch and development branch respectively.
+Any other existing branch besides key branches is considered a feature or hotfix. Flow differentiates them by their relation to key branches. Feature branches are merged into the development branch. Similarly, hotfixes are merged to the production branch and into the corresponding 'major' branch.
 
-Features are merged into the development branch. Similarly hotfixes are merged to stable branch and an appropriate production branch (see below) according to the major version number.
+- Command `flow` on a *feature* branch results into action 'release feature'.
+- Command `flow` on a *hotfix* branch results into action 'release hotfix'.
 
-Note: Using 'hotfix' or 'feature' keywords flows a default hotfix or feature branch. The default branch is either created or merged according to its existence.
+Using the 'hotfix' or 'feature' keyword results in a hotfix or feature action regardless of the current branch. The default hotfix or feature branch is either created or merged based on its existence.
 
-## Flow to new branches
+- Command `flow feature` results into action 'create/release default feature'.
+- Command `flow hotfix` results into action 'create/release default hotfix'.
 
-Feature branches are created from the development branch. Running Flow with an argument on the development branch creates a new feature with that name. Hotfixes work on the same principle when run from stable or production branches.
+## Flow arbitrary branches
 
-Production branches are stable branches for separate major versions, like 'prod-1'. Running Flow on them creates a hotfix respecting their major version. Therefore, merging such a hotfix will affect the appropriate production branch.
+As stated above, any arbitrary branch is considered either a feature or hotfix. Therefore running Flow with an arbitrary branch name argument results in creating or releasing a feature or a hotfix of that name with the following logic.
+
+1. If the specified branch exists, it is merged accordingly (as a feature or hotfix).
+2. Else if on a production branch (or a 'major' production branch), a hotfix is created.
+3. Else a new feature is created.
 
 ## Try Flow today
 
-Flow focuses on simplicity in usage. No argument is required unless you want to specify a different or new branch to flow. Before proceeding, Flow offers the action to the user to confirm.
+Flow emphasizes simplicity in its usage. No arguments are needed unless you want to specify a different or new branch. For ease of use, Flow always prompts for confirmation before proceeding.
 
-If interested, feel free to [download Flow from GitHub](https://github.com/internetguru/flow). Check out the tutorial for an easy way to get started. Your feedback, suggestions, and contributions are welcome.
+If you're interested, feel free to [download Flow from GitHub](https://github.com/internetguru/flow). Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.

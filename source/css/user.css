@@ -11,7 +11,7 @@ body {
 #article-container pre {
     color: #333;
     font-size: 0.9em;
-    line-height: 1.4;
+    line-height: 1.2;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace !important;
 }
 html[data-theme="dark"] #article-container pre {
