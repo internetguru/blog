@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- New post on avoiding branching models.
+
 ## [0.6.1] - 2023-04-29
 
 ### Fixed
