@@ -17,7 +17,7 @@ keywords:
 
 # Maintain a branching model with Flow
 
-Software development is a continuous process. Maintaining a branching model can be time consuming. That's where Flow comes into play. It's a command-line developer tool that automates tasks of maintaining and advancing a project on common git branching models.
+Software development is a continuous process. Maintaining a branching model can be time consuming. That's where Flow comes into play. It's a command-line developer tool that automates tasks of maintaining and advancing a project on common Git branching models.
 
 Flow reduces human errors and streamlines the workflow. It enables you to focus on the development instead of technicalities. Flow offers a wide range of features that have resulted from being used on projects of various sizes over years.
 
@@ -42,10 +42,10 @@ The validation phase ensures that your project is compliant with a branching mod
 
 ## Setup and configuration
 
-Flow can be initiated in any folder with or without files and on any existing git repository. Flow adapts to existing branches from a variety of common naming conventions.
+Flow can be initiated in any folder with or without files and on any existing Git repository. Flow adapts to existing branches from a variety of common naming conventions.
 
- - Flow can initiate a git branching repository in any folder with or without files.
- - Flow can convert any existing git repository to a git branching model.
+ - Flow can initiate a Git branching repository in any folder with or without files.
+ - Flow can convert any existing Git repository to a Git branching model.
  - Flow automatically adapts to existing branches, such as 'release' instead of the default 'staging'.
 
 ## Try Flow today
