@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.7.0] - 2023-05-01
+
+_Stable release based on [0.7.0-rc.1]._
+
 ## [0.7.0-rc.1] - 2023-05-01
 
 ### Added
@@ -87,6 +91,7 @@ _Stable release based on [0.6.0-rc.1]._
 - This CHANGELOG file.
 
 [Unreleased]: https://https://github.com/internetguru/blog/compare/staging...dev
+[0.7.0]: https://https://github.com/internetguru/blog/compare/v0.6.1...v0.7.0
 [0.7.0-rc.1]: https://github.com/internetguru/blog/releases/tag/v0.6.1
 [0.6.1]: https://https://github.com/internetguru/blog/compare/v0.6.0...v0.6.1
 [0.6.0]: https://https://github.com/internetguru/blog/compare/v0.5.1...v0.6.0
