@@ -1,5 +1,5 @@
 ---
-title: Creating Multi-Architecture Docker Images
+title: Creating Docker Hub Multi-Architecture Docker Image
 date: 2023-04-29 07:47:00
 copyright_author: Pavel Petrzela
 copyright_author_href: https://www.linkedin.com/in/pavelpetrzela/
@@ -18,7 +18,7 @@ keywords:
   - docker hub
 ---
 
-# Creating Multi-Architecture Docker Images
+# Creating Docker Hub Multi-Architecture Docker Image
 
 Creating a [Docker](https://www.docker.com/) image that supports both arm64 and amd64 architectures can be achieved through the use of Docker Buildx, a CLI plugin that extends the Docker command with the full support of the features provided by [Moby BuildKit](https://github.com/moby/buildkit). Follow the steps below to create a multi-architecture Docker image.
 
