@@ -84,25 +84,46 @@ This way is recomended for TODO...
 
 Once you have prepared the Docker image for your course, the next step is to create an evaluation script that will assess students' work.
 
-TODO desc: syntax bash, automatically runned in CI, generating badges
+TODO desc: syntax bash, automatically runned in CI job, generating badges for Dashboard, mark output of specific file for dashboard
 
 TODO structure
 
  - predefined scripts in academy repo or specific in `.academy/[script]`
  - `pre-evaluate_${ACADEMY_LANG}`
+   - define default badges (example)
+   - define folders, variables, ...
  - `evaluate_${ACADEMY_LANG}`
+   - using CHANGED_FILES you can loop over files, e.g.
+     ```sh
+     for file in "${CHANGED_FILES[@]}"; do
+       echo "Evaluating '${file}'"
+       check_x "${file}"
+       # process ${file} evaluation
+     done
+     ```
+   - process evaluation, use run_io_tests function
+   - generate badges
+   - marks for Dashboard
+   %% file start ${fileName} %%
+   %% file end ${fileName} %%
  - `post-evaluate_${ACADEMY_LANG}`
 
  - available variables
 
 ### Badges
 
-TODO
+TODO desc: Using shields.io to generate svg badges. Extending svg to support link and title.
 
  - for connection with Dashboard
  - for `README.md`
- ^ describe how to use it (meta job)
+ ^ describe how to use it (from meta job output)
  - `badge_generate` function with params
+   - `label` (required)
+   - `value` (required)
+   - `color` see [Shields.io Colors section](https://shields.io#colors)
+   - `file name`
+   - `link`
+   - `title`
 
 ### IO tests
 
