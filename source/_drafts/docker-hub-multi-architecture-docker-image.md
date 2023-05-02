@@ -101,4 +101,6 @@ variables:
   - ACADEMY_DOCKER_IMAGE: your-dockerhub-username/your-image-name:tag
 ```
 
-TODO tip: define it in variable
+## Conclusion
+
+TODO summary
