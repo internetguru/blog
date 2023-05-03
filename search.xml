@@ -51,36 +51,36 @@
     <url>/flow-avoiding/</url>
     <content><![CDATA[<h1 id="Avoiding-Git-branching-models"><a href="#Avoiding-Git-branching-models" class="headerlink" title="Avoiding Git branching models"></a>Avoiding Git branching models</h1><p>There are several Git branching models (strategies) from very basic to complex. I asked ChatGPT what reasons might lead developers to avoid Git branching models – apart from ignorance. It provided several valid points, which I have decided to share along with comments and examples from my own experience.</p>
 <p>Many of the reasons provided are related to the overhead associated with branching models, particularly the more complex ones. Flow, a command-line interface tool for developers, significantly reduces this overhead.</p>
-<h2 id="1-Simplicity"><a href="#1-Simplicity" class="headerlink" title="1. Simplicity"></a>1. Simplicity</h2><blockquote>
-<p>In small projects or when working alone, developers might find a branching model excessive, preferring a simpler linear history to keep their work straightforward.</p>
-</blockquote>
-<p>This addresses a common question I often get – do all our projects use Git Flow? Certainly not. Some of our small scripts even share a common Git repository for the sake of incremental backups. It is easy to switch to a branching model when a small project starts growing and new requirements arise.</p>
-<p>On the other hand, all our projects that employ a Git branching model use Git Flow. The reason is that with Flow, the maintenance difference compared to a simpler branching model is negligible.</p>
-<h2 id="2-Workflow-preference"><a href="#2-Workflow-preference" class="headerlink" title="2. Workflow preference"></a>2. Workflow preference</h2><blockquote>
-<p>Developers might have their preferred workflows that don’t involve a branching model, or they could be using a different version control system that doesn’t support branching as effectively as Git.</p>
-</blockquote>
-<p>In my experience, workflows not matching any branching model are either vague (non-deterministic) or represent a slightly modified version of an existing branching model. Transitioning to a deterministic branching model is usually easy and brings clarity to the whole workflow.</p>
+<h2 id="1-Simplicity"><a href="#1-Simplicity" class="headerlink" title="1. Simplicity"></a>1. Simplicity</h2><blockquote><p>In small projects or when working alone, developers might find a branching model excessive, preferring a simpler linear history to keep their work straightforward.</p>
+<footer><strong>ChatGPT</strong></footer></blockquote>
+
+<p>This addresses a common question – whether all our projects use Git Flow. Certainly not. Some of our small scripts even share a common Git repository just for the sake of incremental backups. It is easy to switch to a branching model when a small project starts growing and new requirements arise.</p>
+<p>On the other hand, all our projects that employ a Git branching model use Git Flow. The reason is that with Flow, the difference in overhead compared to a simpler branching models is negligible.</p>
+<h2 id="2-Workflow-preference"><a href="#2-Workflow-preference" class="headerlink" title="2. Workflow preference"></a>2. Workflow preference</h2><blockquote><p>Developers might have their preferred workflows that don’t involve a branching model, or they could be using a different version control system that doesn’t support branching as effectively as Git.</p>
+<footer><strong>ChatGPT</strong></footer></blockquote>
+
+<p>In my experience, workflows that do not align with any specific branching model are often ambiguous (non-deterministic) or represent a slightly altered version of an existing branching model. Transitioning to a deterministic branching model typically simplifies the process and brings clarity to the entire workflow.</p>
 <p>Replacing another version control system that lacks effective branching support can be challenging, particularly for larger projects. Conducting a cost-benefit analysis is essential in such cases.</p>
-<h2 id="3-Learning-curve"><a href="#3-Learning-curve" class="headerlink" title="3. Learning curve"></a>3. Learning curve</h2><blockquote>
-<p>For some developers, particularly those new to Git, the learning curve involved in adopting a branching model might be a deterrent, as they might find it more difficult to comprehend and implement compared to simpler workflows.</p>
-</blockquote>
+<h2 id="3-Learning-curve"><a href="#3-Learning-curve" class="headerlink" title="3. Learning curve"></a>3. Learning curve</h2><blockquote><p>For some developers, particularly those new to Git, the learning curve involved in adopting a branching model might be a deterrent, as they might find it more difficult to comprehend and implement compared to simpler workflows.</p>
+<footer><strong>ChatGPT</strong></footer></blockquote>
+
 <p>For certain roles, even basic Git usage can be daunting. Incorporating more complex branching strategies introduces an additional layer of complexity. This is an important factor to consider when deciding on a branching model.</p>
 <p>For junior developers and external workers without Git skills or aspirations, there are workarounds based on their level of engagement. Flow could serve as an appropriate workaround, as long as it is properly integrated.</p>
-<h2 id="4-Integration-with-external-tools"><a href="#4-Integration-with-external-tools" class="headerlink" title="4. Integration with external tools"></a>4. Integration with external tools</h2><blockquote>
-<p>Some tools or platforms may not support or integrate effectively with a Git branching model, causing developers to choose an alternative workflow to guarantee compatibility.</p>
-</blockquote>
-<p>Evaluating the need to change incompatible tools should be included in the cost-benefit analysis. Flow, known for its simplicity and versatility, offers excellent compatibility when it comes to integration. For more information, refer to the Flow man page.</p>
-<h2 id="5-Collaboration-challenges"><a href="#5-Collaboration-challenges" class="headerlink" title="5. Collaboration challenges"></a>5. Collaboration challenges</h2><blockquote>
-<p>In certain team environments, implementing a branching model could be perceived as increasing complexity and confusion, potentially making it more difficult for team members to coordinate and collaborate effectively.</p>
-</blockquote>
+<h2 id="4-Integration-with-external-tools"><a href="#4-Integration-with-external-tools" class="headerlink" title="4. Integration with external tools"></a>4. Integration with external tools</h2><blockquote><p>Some tools or platforms may not support or integrate effectively with a Git branching model, causing developers to choose an alternative workflow to guarantee compatibility.</p>
+<footer><strong>ChatGPT</strong></footer></blockquote>
+
+<p>Evaluating the need to change incompatible tools should be included in the cost-benefit analysis. Flow, known for its simplicity and versatility, offers excellent compatibility when it comes to integration. For more information, refer to the Flow documentation.</p>
+<h2 id="5-Collaboration-challenges"><a href="#5-Collaboration-challenges" class="headerlink" title="5. Collaboration challenges"></a>5. Collaboration challenges</h2><blockquote><p>In certain team environments, implementing a branching model could be perceived as increasing complexity and confusion, potentially making it more difficult for team members to coordinate and collaborate effectively.</p>
+<footer><strong>ChatGPT</strong></footer></blockquote>
+
 <p>With Flow, much of the common development process is significantly simplified, minimizing overhead. Furthermore, linear development can be employed for specific tasks such as creating unit tests or conducting quality assurance.</p>
-<h2 id="6-Resistance-to-change"><a href="#6-Resistance-to-change" class="headerlink" title="6. Resistance to change"></a>6. Resistance to change</h2><blockquote>
-<p>Developers may resist change, particularly if they have been using a specific workflow for an extended period and see no need to adopt a new model.</p>
-</blockquote>
+<h2 id="6-Resistance-to-change"><a href="#6-Resistance-to-change" class="headerlink" title="6. Resistance to change"></a>6. Resistance to change</h2><blockquote><p>Developers may resist change, particularly if they have been using a specific workflow for an extended period and see no need to adopt a new model.</p>
+<footer><strong>ChatGPT</strong></footer></blockquote>
+
 <p>Perceiving no reason to adopt a branching model may seem like ignorance. However, irrational resistance to change is a serious and prevalent reason for rejecting anything. Ensure that you take into account relevant factors, such as the cost of the change and the benefits it will provide.</p>
-<h2 id="7-Performance-considerations"><a href="#7-Performance-considerations" class="headerlink" title="7. Performance considerations"></a>7. Performance considerations</h2><blockquote>
-<p>In certain situations, a Git branching model may introduce extra overhead concerning merging and integration, potentially causing performance issues or merge conflicts that developers would prefer to avoid.</p>
-</blockquote>
+<h2 id="7-Performance-considerations"><a href="#7-Performance-considerations" class="headerlink" title="7. Performance considerations"></a>7. Performance considerations</h2><blockquote><p>In certain situations, a Git branching model may introduce extra overhead concerning merging and integration, potentially causing performance issues or merge conflicts that developers would prefer to avoid.</p>
+<footer><strong>ChatGPT</strong></footer></blockquote>
+
 <p>Particularly in complex models like Git Flow, the overhead can be considerable. Flow significantly reduces this overhead, as illustrated in various articles discussing Flow.</p>
 <h2 id="Try-Flow-today"><a href="#Try-Flow-today" class="headerlink" title="Try Flow today"></a>Try Flow today</h2><p>When using Flow, the only logical reason to avoid Git branching models is the project size and lack of requirements. The Flow man page offers a working example of its usage. Experience for yourself how simple it is to manage the most complex branching model including development with a feature, release candidate with bug fixing, and hot fixing on production.</p>
 <p>If you’re interested, feel free to <a href="https://github.com/internetguru/flow">download Flow from GitHub</a>. Check out the tutorial for an easy way to get started. Your feedback is welcome as well as suggestions and contribution.</p>
