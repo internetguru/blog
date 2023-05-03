@@ -17,21 +17,16 @@ keywords:
   - github
 ---
 
-# How to Setup Custom Evaluation for Internet Guru Academy
+# How to evaluate with Internet Guru Academy
 
-TODO: desc / outline
+This project should contain all the necessary materials, including basic code, resources, and instructions, to allow students to successfully complete their assignment.
 
-## Section 1: Prerequisites
+## Prerequisites
 
-Before diving into the process of setting up custom evaluation for the Internet Guru Academy, it is essential to ensure that you have a GitLab project ready for distribution to your students.
+- [Academy assignment](academy-assignments)
+- [Academy compliant docker image](academy-docker-images)
 
-{% note info %}
-This project should contain all the necessary materials, including basic code, resources, and instructions, to allow students to successfully complete their assignment. See [how to setup Internet Guru Academy GitLab project](#TODO).
-{% endnote %}
-
-TODO link "getting docker image"
-
-## Section 3: Writing Evaluation Script
+## Writing Evaluation Script
 
 Once you have prepared the Docker image for your course, the next step is to create an evaluation script that will assess students' work.
 
@@ -101,7 +96,7 @@ TODO: Directory structure for `/src/SumClass.java` class IO tests:
     └── …
 ```
 
-## Section 4: Get it All Together
+## Get it All Together
 
 TODO summary with complex example
 
