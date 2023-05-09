@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Hide Catalog numbers.
+- Show post description in post preview instead of auto_excerpt.
+
 ## [0.7.1] - 2023-05-03
 
 ### Changed
@@ -94,6 +101,7 @@ _Stable release based on [0.6.0-rc.1]._
 
 - This CHANGELOG file.
 
+[Unreleased]: https://https://github.com/internetguru/blog/compare/staging...dev
 [0.7.1]: https://https://github.com/internetguru/blog/compare/v0.7.0...v0.7.1
 [0.7.0]: https://https://github.com/internetguru/blog/compare/v0.6.1...v0.7.0
 [0.7.0-rc.1]: https://github.com/internetguru/blog/releases/tag/v0.6.1

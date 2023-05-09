@@ -1,5 +1,5 @@
 ---
-title: Creating Multi-Architecture Docker Images
+title: Creating Docker Hub Multi-Architecture Docker Image
 date: 2023-04-29 07:47:00
 copyright_author: Pavel Petrzela
 copyright_author_href: https://www.linkedin.com/in/pavelpetrzela/
@@ -16,15 +16,16 @@ keywords:
   - arm64
   - buildx
   - docker hub
+description: TODO
 ---
 
-# Creating Multi-Architecture Docker Images
+# Creating Docker Hub Multi-Architecture Docker Image
 
 Creating a [Docker](https://www.docker.com/) image that supports both arm64 and amd64 architectures can be achieved through the use of Docker Buildx, a CLI plugin that extends the Docker command with the full support of the features provided by [Moby BuildKit](https://github.com/moby/buildkit). Follow the steps below to create a multi-architecture Docker image.
 
 ## Step 1: Prepare Your Dockerfile
 
-First, create a Dockerfile in your project directory, specifying the base image, tools, packages, and configurations required for your course. Make sure that the base image you choose has support for both `arm64` and `amd64` architectures.
+First, create a `Dockerfile` in your project directory, specifying the tools, packages, and configurations required for your course. Make sure that the base image you choose has support for both `arm64` and `amd64` architectures.
 
 {% note info %}
 We recommend to use [Internet Guru Academy](https://academy.internetguru.io/) minimal [base image for Dashboard](https://hub.docker.com/r/internetguru/academy/tags) purposes as you can see in the following example.
@@ -101,4 +102,6 @@ variables:
   - ACADEMY_DOCKER_IMAGE: your-dockerhub-username/your-image-name:tag
 ```
 
-TODO tip: define it in variable
+## Conclusion
+
+TODO summary

@@ -13,6 +13,7 @@ keywords:
     - tools
     - branching
     - validation
+description: Software development is a continuous process. Maintaining a branching model can be time consuming. That's where Flow comes into play. It's a command-line developer tool that automates tasks of maintaining and advancing a project on common Git branching models.
 ---
 
 # Maintain a branching model with Flow
