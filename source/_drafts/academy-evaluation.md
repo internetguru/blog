@@ -15,6 +15,7 @@ keywords:
   - bash
   - cli
   - github
+description: TODO
 ---
 
 # How to evaluate with Internet Guru Academy

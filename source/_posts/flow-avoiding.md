@@ -18,6 +18,7 @@ keywords:
     - performance
     - git flow
     - project size
+description: There are several Git branching models (strategies) from very basic to complex. I asked ChatGPT what reasons might lead developers to avoid Git branching models – apart from ignorance. It provided several valid points, which I have decided to share along with comments and examples from my own experience.
 ---
 
 # Avoiding Git branching models
