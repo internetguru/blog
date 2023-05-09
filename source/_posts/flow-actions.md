@@ -13,6 +13,7 @@ tags:
   - git
   - automation
   - development
+description: Advancement in branching models is mostly deterministic. That's why the term 'flow' often appears in branching model names. Internet Guru Flow is a CLI tool for developers designed to automate that flow.
 ---
 
 # Flow's action decision tree

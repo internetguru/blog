@@ -14,6 +14,7 @@ keywords:
     - branching
     - validation
     - merging
+description: In accordance with typical Git branching models, Flow defines key branches, feature and hotfix branches, and individual major branches. Flow helps developers keep track of those branches and their mutual relations.
 ---
 
 # Merging branches with Flow

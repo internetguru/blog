@@ -14,12 +14,12 @@ keywords:
     - branching
     - validation
     - changelog
+description: A good changelog is a quality indicator of well-managed software. Flow is a command-line interface (CLI) tool designed to help follow a branching model and advance through it. Among other things, Flow helps maintain the changelog.
 ---
 
 # Handle Changelog with Flow
 
-A good changelog is a quality indicator of well-managed software.
-Flow is a command-line interface (CLI) tool designed to help follow a branching model and advance through it. Among other things, Flow helps maintain the changelog.
+A good changelog is a quality indicator of well-managed software. Flow is a command-line interface (CLI) tool designed to help follow a branching model and advance through it. Among other things, Flow helps maintain the changelog.
 
 Following the [Keep a changelog](https://keepachangelog.com/en/) convention, Flow adds or modifies lines in changelog according to each action. It validates the changelog's structure and offers corrections if needed.
 
