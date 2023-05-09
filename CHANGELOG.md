@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- Hide Catalog numbers.
+- Show post description in post preview instead of auto_excerpt.
+
 ## [0.7.1] - 2023-05-03
 
 ### Changed
