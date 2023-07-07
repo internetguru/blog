@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>The need for reimplementation</title>
+    <url>/devops-reimplementation/</url>
+    <content><![CDATA[<h1 id="The-need-for-reimplementation"><a href="#The-need-for-reimplementation" class="headerlink" title="The need for reimplementation"></a>The need for reimplementation</h1><p>This post shows why agile development would eventually come to a point where it needs to be reimplemented. Why this happens and what benefits it brings with a helpful analogy.</p>
+<h2 id="The-road-trip-analogy"><a href="#The-road-trip-analogy" class="headerlink" title="The road trip analogy"></a>The road trip analogy</h2><p>Let’s start by considering Agile Development as a road trip. At the start of the journey, you might have a rough idea of your final destination (like driving from New York to San Francisco), but the exact route you’ll take, the sights you’ll see, the restaurants you’ll eat at, are not all determined upfront.</p>
+<p>As you go, you’ll decide what’s the next best move, maybe based on the weather, traffic, or recommendations from locals. This is the heart of Agile Development; responding to changes and making incremental improvements, rather than following a set-in-stone plan.</p>
+<h2 id="Technical-debt-reasoning"><a href="#Technical-debt-reasoning" class="headerlink" title="Technical debt reasoning"></a>Technical debt reasoning</h2><p>As you progress on your journey, your car - the vehicle enabling your trip, may wear down due to the long drive. It needs maintenance, maybe even upgrades, to ensure that it continues to be reliable and efficient.</p>
+<p>Similarly, in an Agile Development project, the code base (the car, in our analogy) may also wear down over time. This could be due to multiple reasons like technical debt. Quick fixes that were made to meet deadlines aren’t long-term solutions. Also, architectural issues, or changes in technology or business needs.</p>
+<h2 id="Reimplementation-benefits"><a href="#Reimplementation-benefits" class="headerlink" title="Reimplementation benefits"></a>Reimplementation benefits</h2><p>This is where reimplementation - akin to overhauling or even replacing your car - comes into play. You would need to invest some time and resources into this process, but it brings several benefits:</p>
+<ol>
+<li><p>Performance and Efficiency: Just like a new or well-maintained car runs better and uses less fuel, a code base that has been reimplemented will likely run more efficiently. This can result in cost savings, less resource consumption, and higher performance.</p>
+</li>
+<li><p>Ease of Adding New Features: If you’re finding that adding any new feature to the existing system is becoming increasingly complex and time-consuming, reimplementation can help. It’s like customizing your car for long trips - once done, it becomes much easier to make additions and changes suited to your journey.</p>
+</li>
+<li><p>Up-to-date Technology: Reimplementation gives you the chance to take advantage of the latest technology, similar to how a new car might have advanced features that an older model lacks. This can make your application more competitive.</p>
+</li>
+<li><p>Better Understanding of the System: The process of reimplementation forces you to understand the existing system at a deeper level, which can lead to the discovery of latent bugs or improvements.</p>
+</li>
+<li><p>Longevity and Maintainability: Just as maintaining your car ensures its longevity, keeping your code base up to date makes sure it can be used and maintained longer, without running into major issues or needing major overhauls frequently.</p>
+</li>
+</ol>
+<p>Of course, reimplementation should not be taken lightly - it requires a considerable investment and should be done when the time is right. But when done well, it can ensure that your agile development project continues to deliver value efficiently and effectively for a long time.</p>
+]]></content>
+      <categories>
+        <category>devops</category>
+      </categories>
+      <tags>
+        <tag>development</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Flow&#39;s action decision tree</title>
     <url>/flow-actions/</url>
     <content><![CDATA[<h1 id="Flow’s-action-decision-tree"><a href="#Flow’s-action-decision-tree" class="headerlink" title="Flow’s action decision tree"></a>Flow’s action decision tree</h1><p>Advancement in branching models is mostly deterministic. That’s why the term ‘flow’ often appears in branching model names. Internet Guru Flow is a CLI tool for developers designed to automate that flow.</p>
@@ -40,10 +70,10 @@
         <category>flow</category>
       </categories>
       <tags>
+        <tag>development</tag>
         <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
-        <tag>development</tag>
       </tags>
   </entry>
   <entry>
@@ -89,10 +119,10 @@
         <category>flow</category>
       </categories>
       <tags>
+        <tag>development</tag>
         <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
-        <tag>development</tag>
       </tags>
   </entry>
   <entry>
@@ -119,10 +149,10 @@
         <category>flow</category>
       </categories>
       <tags>
+        <tag>development</tag>
         <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
-        <tag>development</tag>
       </tags>
   </entry>
   <entry>
@@ -158,10 +188,10 @@
         <category>flow</category>
       </categories>
       <tags>
+        <tag>development</tag>
         <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
-        <tag>development</tag>
       </tags>
   </entry>
   <entry>
@@ -211,10 +241,10 @@
         <category>flow</category>
       </categories>
       <tags>
+        <tag>development</tag>
         <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
-        <tag>development</tag>
       </tags>
   </entry>
   <entry>
@@ -251,10 +281,10 @@
         <category>flow</category>
       </categories>
       <tags>
+        <tag>development</tag>
         <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
-        <tag>development</tag>
       </tags>
   </entry>
 </search>
