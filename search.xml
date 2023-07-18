@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Internet Guru Academy alternatives</title>
+    <url>/academy-alternatives/</url>
+    <content><![CDATA[<h1 id="Internet-Guru-Academy-and-alternative-platforms"><a href="#Internet-Guru-Academy-and-alternative-platforms" class="headerlink" title="Internet Guru Academy and alternative platforms"></a>Internet Guru Academy and alternative platforms</h1><p>Internet Guru Academy is a platform for bringing students together with teachers. It helps to deliver (distribute) assignments and collect them in the most profound industry-standard ways following typical educational needs.</p>
+<p>In this article, I want to show the Academy platform in a context of other alternative approaches used across universities and other educational institutions, such as boot camps.</p>
+<h2 id="Git-Based-Systems"><a href="#Git-Based-Systems" class="headerlink" title="Git-Based Systems"></a>Git-Based Systems</h2><p>GitHub and GitLab have become staples in the programming world, widely adopted by hundreds of millions of coders globally. These systems were engineered with the working programmer in mind, with features supporting team collaboration, automation, and code review. Getting hands-on with such systems can be instrumental for students in shaping their project portfolios for future careers.</p>
+<p>However, the student context differs substantially from the professional programming environment. Students are typically not part of extensive teams or working under senior programmers’ guidance. Their work involves individual effort, often tackling multiple unique solutions to a single problem—the assignment.</p>
+<p>Therefore, a direct utilization of these systems for education purposes is relatively rare. In many cases, instructors use them to develop and store their materials, but distribute use proprietary systems or manual approach (below) to reach out to their students.</p>
+<h2 id="Modified-Git-Based-Systems"><a href="#Modified-Git-Based-Systems" class="headerlink" title="Modified Git-Based Systems"></a>Modified Git-Based Systems</h2><p>Several entities have endeavored to extend Git-based systems (namely GitLab) for their unique needs, giving birth to platforms tailored for specific courses or narrow purposes. Our platform, the Internet Guru Academy, takes this approach but expands its applicability on a professional scale. It addresses core educational needs, overcoming the constraints often associated with narrowly scoped systems.</p>
+<p>In addition to the base features, Academy introduces a layer of user-friendly tools, including a dashboard for monitoring progress, summary reports, and online editors suited for beginners. By design, assignments can be paired with additional materials and resources for an enriched learning experience.</p>
+<p>Internet Guru Academy is a perfect platform to support both beginners and advanced students. The platform brings instructors and students together utilizing industry-standard environment and best practices.</p>
+<h2 id="Proprietary-Systems"><a href="#Proprietary-Systems" class="headerlink" title="Proprietary Systems"></a>Proprietary Systems</h2><p>Large organizations and universities often rely on Learning Management Systems (LMS), such as Moodle, which are typically designed with an aim that diverges from teaching. Similar limitations are found in other systems like Box and various file managers.</p>
+<p>While these systems do meet certain needs, their functionality is limited and doesn’t mirror the tools and practices utilized anywhere else outside universities. Instructors usually have to do all evaluation manually.</p>
+<h2 id="The-Traditional-Approach"><a href="#The-Traditional-Approach" class="headerlink" title="The Traditional Approach"></a>The Traditional Approach</h2><p>Instructors are usually experts in their fields, but not necessarily always skilled developers. Often left to their own when it comes to managing courses and assignments. This often results in the resort to manual approaches, such as disseminating assignments via lengthy URLs for download and soliciting submission of solutions via email or in person—a process as tedious and exhausting as it sounds.</p>
+<h2 id="Embrace-the-Future-of-Education-with-Academy"><a href="#Embrace-the-Future-of-Education-with-Academy" class="headerlink" title="Embrace the Future of Education with Academy"></a>Embrace the Future of Education with Academy</h2><p>With Internet Guru Academy, there is no line of students. There are no emails with attachments. You don’t have to deal with individual solutions manually. The dashboard presents how students are doing in real time including an automatic evaluation and a full solution history.</p>
+<p>Academy invites you to experience the future of coding education firsthand. <a href="https://academy.internetguru.io/">Visit our webpage</a> for a free trial and a demo that offers guidance and real-time evaluation. There’s no need to wait on feedback from your instructor—you can see how you’re doing right away. Embrace Academy and simplify the learning process while gaining industry-relevant experience.</p>
+]]></content>
+      <categories>
+        <category>academy</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>automation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The need for reimplementation</title>
     <url>/devops-reimplementation/</url>
     <content><![CDATA[<h1 id="The-need-for-reimplementation"><a href="#The-need-for-reimplementation" class="headerlink" title="The need for reimplementation"></a>The need for reimplementation</h1><p>This post shows why agile development would eventually come to a point where it needs to be reimplemented. Why this happens and what benefits it brings with a helpful analogy.</p>
@@ -70,10 +95,10 @@
         <category>flow</category>
       </categories>
       <tags>
-        <tag>development</tag>
-        <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
+        <tag>development</tag>
+        <tag>cli</tag>
       </tags>
   </entry>
   <entry>
@@ -119,10 +144,10 @@
         <category>flow</category>
       </categories>
       <tags>
-        <tag>development</tag>
-        <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
+        <tag>development</tag>
+        <tag>cli</tag>
       </tags>
   </entry>
   <entry>
@@ -149,10 +174,10 @@
         <category>flow</category>
       </categories>
       <tags>
-        <tag>development</tag>
-        <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
+        <tag>development</tag>
+        <tag>cli</tag>
       </tags>
   </entry>
   <entry>
@@ -188,10 +213,10 @@
         <category>flow</category>
       </categories>
       <tags>
-        <tag>development</tag>
-        <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
+        <tag>development</tag>
+        <tag>cli</tag>
       </tags>
   </entry>
   <entry>
@@ -241,10 +266,10 @@
         <category>flow</category>
       </categories>
       <tags>
-        <tag>development</tag>
-        <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
+        <tag>development</tag>
+        <tag>cli</tag>
       </tags>
   </entry>
   <entry>
@@ -281,10 +306,10 @@
         <category>flow</category>
       </categories>
       <tags>
-        <tag>development</tag>
-        <tag>cli</tag>
         <tag>git</tag>
         <tag>automation</tag>
+        <tag>development</tag>
+        <tag>cli</tag>
       </tags>
   </entry>
 </search>
