@@ -83,7 +83,7 @@ Hotfixes are released into the production branch using a non-fast-forward merge.
 
 ``` plaintext During
                   C---D---E---F hotfix [0.1.1]
-                 /                          ^ based on prod
+                 /                          ^ prod++
             A---B prod [0.1.0]
 ```
 
