@@ -21,20 +21,24 @@ description: In accordance with typical Git branching models, Flow defines key b
 
 In accordance with typical Git branching models, Flow defines key branches, feature and hotfix branches, and individual major branches. Flow helps developers keep track of those branches and their mutual relations.
 
+{% note info %}
+The diagrams presented only display relevant information related to the topic at hand. Additional details, including tags, branches, and commits that occur in the process, are omitted.
+{% endnote %}
+
 ## Merging key branches
 
 Flow ensures that key branches exist and are merged into subordinate branches (production branch to staging, staging to development). Flow reports any irregularities and offers to correct them automatically. Such as the following bug fixing on staging:
 
 ``` plaintext Before
-                  A---B---C staging
+                  C---D---E staging
                  /
-            D---E develop
+            A---B develop
 ```
 
 ``` plaintext After
-                  A---B---C staging
+                  C---D---E staging
                  /         \
-            D---E-----------F develop
+            A---B-----------F develop
 ```
 
 Flow handles more complex merging actions, such as releasing a hotfix. This results in subsequent merges of the hotfix to production branch, production to staging (if not merged), and staging to development branch. It also fixes any partial inconsistencies.
@@ -45,21 +49,21 @@ Feature branches are created from and merged into the development branch on dema
 
 
 ``` plaintext Before
-                  A---B---C feature
+                  C---D---E feature
                  /
-            D---E---F---G---H develop
+            A---B---F---G---H develop
 ```
 
 ``` plaintext During
-                  A---B---C---I feature
+                  C---D---E---I feature
                  /           /
-            D---E---F---G---H develop
+            A---B---F---G---H develop
 ```
 
 ``` plaintext After
-                  A---B---C---I
+                  C---D---E---I
                  /           / \
-            D---E---F---G---H---J develop
+            A---B---F---G---H---J develop
 ```
 
 ## Merging hotfixes

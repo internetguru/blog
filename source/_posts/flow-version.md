@@ -21,6 +21,10 @@ description: Version numbers play a crucial role in branching models. Flow is a 
 
 Version numbers play a crucial role in branching models. Flow is a command-line developer tool to maintain software projects compliant with a branching model. Additionally, Flow offers robust version handling and ensures that version numbers are always in compliance with the model.
 
+{% note info %}
+The diagrams presented only display relevant information related to the topic at hand. Additional details, including tags, branches, and commits that occur in the process, are omitted.
+{% endnote %}
+
 ## Validation and compliance
 
 Flow ensures all version files are present and valid. For example, the development major or minor version must be greater than the staging version. Flow not only verifies versions but also reports irregularities and offers to correct them.
@@ -28,7 +32,7 @@ Flow ensures all version files are present and valid. For example, the developme
 ``` plaintext Before
             A prod [0.0.0]
              \
-              B---C develop [0.0.0] (invalid)
+              B develop [0.0.0] (invalid)
 ```
 
 ``` plaintext After
@@ -52,39 +56,41 @@ During the general release process, from development to staging to production, F
 ``` plaintext Release develop
             A prod [0.0.0]
              \
-              \       D staging [0.1.0]
+              \       E staging [0.1.0]
                \     /
-                B---C develop [0.2.0]
+                B---C---D develop [0.2.0]
 ```
 
 ``` plaintext Release staging
-            A-----------E prod [0.1.0]
+            A-----------F prod, staging [0.1.0]
              \         /
-              \       D
+              \       E
                \     /
-                B---C develop [0.2.0]
+                B---C---D develop [0.2.0]
 ```
 
 When the development branch is released multiple times without releasing the staging branch, versions on the development and staging branches are preserved. However, the release candidate number increments. Read more about {% post_link flow-changelog 'handling changelog with Flow' %}.
-
-{% note info %}
-The diagrams presented only display relevant information related to the topic at hand. Additional details, including tags, branches, and commits that occur in the process, are omitted.
-{% endnote %}
 
 ## Hotfixing
 
 Hotfixes are released into the production branch using a non-fast-forward merge. Flow automatically increments the patch version number, removes the hotfix branch, and prompts for a changelog entry.
 
 ``` plaintext Before
-                  A---B---C hotfix [0.1.0]
+                  C---D---E hotfix [0.1.0]
                  /
-            D---E prod [0.1.0]
+            A---B prod [0.1.0]
+```
+
+``` plaintext During
+                  C---D---E---F hotfix [0.1.1]
+                 /                          ^ based on prod
+            A---B prod [0.1.0]
 ```
 
 ``` plaintext After
-                  A---B---C
-                 /         \
-            D---E-----------F prod [0.1.1]
+                  C---D---E---F hotfix [0.1.1]
+                 /             \
+            A---B---------------G prod [0.1.1]
 ```
 
 The hotfix version is not incremented until it is merged. This supports multiple parallel hotfixes. Hotfixes are also released into separate production branches corresponding to their major version. Read more about {% post_link flow-merging 'merging branches with Flow' %}.
