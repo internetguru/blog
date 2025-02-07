@@ -6,7 +6,7 @@
 <meta property="og:image" content="https://blog.internetguru.io/icons/george.jpg">
 <meta property="article:author" content="George Pavelka">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.internetguru.io/icons/george.jpg"><link rel="shortcut icon" href="/icons/favicon.ico"><link rel="canonical" href="https://blog.internetguru.io/archives/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-HCYRKCE4KB"></script><script>window.dataLayer = window.dataLayer || [];
+<meta name="twitter:image" content="https://blog.internetguru.io/icons/george.jpg"><link rel="shortcut icon" href="/icons/favicon.ico"><link rel="canonical" href="https://blog.internetguru.io/archives/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-HCYRKCE4KB"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HCYRKCE4KB');
@@ -16,11 +16,11 @@ gtag('config', 'G-HCYRKCE4KB');
   localSearch: undefined,
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false},
   copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
   },
   relativeDate: {
     homepage: false,
@@ -28,7 +28,7 @@ gtag('config', 'G-HCYRKCE4KB');
   },
   runtime: '',
   dateSuffix: {
-    just: 'Just',
+    just: 'Just now',
     min: 'minutes ago',
     hour: 'hours ago',
     day: 'days ago',
@@ -37,11 +37,9 @@ gtag('config', 'G-HCYRKCE4KB');
   copyright: undefined,
   lightbox: 'fancybox',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
   },
   isPhotoFigcaption: false,
   islazyload: false,
@@ -57,85 +55,78 @@ gtag('config', 'G-HCYRKCE4KB');
   isHome: false,
   isHighlightShrink: undefined,
   isToc: false,
-  postUpdate: '2023-09-03 15:01:43'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
+  postUpdate: '2025-02-07 03:44:47'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
         }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
         }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      if (id) link.id = id
-      link.onerror = reject
-      link.onload = link.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        link.onload = link.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(link)
-    })
-  
-      win.activateDarkMode = function () {
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
         document.documentElement.setAttribute('data-theme', 'dark')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
           document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
         }
       }
-      win.activateLightMode = function () {
+      win.activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
           document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
@@ -143,9 +134,9 @@ gtag('config', 'G-HCYRKCE4KB');
       }
       const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
         if (asideStatus === 'hide') {
@@ -155,17 +146,17 @@ gtag('config', 'G-HCYRKCE4KB');
         }
       }
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
       }
-    }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/user.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/icons/george.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/images/03455fb6-9a0c-478e-a8bc-06f3d4a1ca1d.jpeg')"><nav id="nav"><span id="blog-info"><a href="/" title="Internet Guru Blog"><img class="site-icon" src="/icons/leaf-duo-blue.png"/><span class="site-name">Internet Guru Blog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">Archives</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">Articles - 8</div><div class="article-sort"><div class="article-sort-item year">2023</div><div class="article-sort-item"><a class="article-sort-item-img" href="/academy-alternatives/" title="Internet Guru Academy alternatives"><img src="/images/418f1df7-9364-4a80-a6c6-6e70937de0b7.jpeg" alt="Internet Guru Academy alternatives" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-07-05T21:01:31.000Z" title="Created 2023-07-05 21:01:31">2023-07-05</time></div><a class="article-sort-item-title" href="/academy-alternatives/" title="Internet Guru Academy alternatives">Internet Guru Academy alternatives</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/devops-reimplementation/" title="The need for reimplementation"><img src="/images/cd93ddda-d5b4-4257-b383-72c8ce4d39cf.jpeg" alt="The need for reimplementation" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-07-05T20:09:31.000Z" title="Created 2023-07-05 20:09:31">2023-07-05</time></div><a class="article-sort-item-title" href="/devops-reimplementation/" title="The need for reimplementation">The need for reimplementation</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-avoiding/" title="Avoiding Git branching models"><img src="/images/b55bf970-b043-493b-aa10-044b61ee79e0.jpeg" alt="Avoiding Git branching models" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-30T21:35:55.000Z" title="Created 2023-04-30 21:35:55">2023-04-30</time></div><a class="article-sort-item-title" href="/flow-avoiding/" title="Avoiding Git branching models">Avoiding Git branching models</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-actions/" title="Flow's action decision tree"><img src="/images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg" alt="Flow's action decision tree" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-16T13:49:31.000Z" title="Created 2023-04-16 13:49:31">2023-04-16</time></div><a class="article-sort-item-title" href="/flow-actions/" title="Flow's action decision tree">Flow's action decision tree</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-merging/" title="Merging branches with Flow"><img src="/images/50356bcb-b5bd-4a68-a065-8b8873786730.jpeg" alt="Merging branches with Flow" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-12T18:44:29.000Z" title="Created 2023-04-12 18:44:29">2023-04-12</time></div><a class="article-sort-item-title" href="/flow-merging/" title="Merging branches with Flow">Merging branches with Flow</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-changelog/" title="Handle Changelog with Flow"><img src="/images/73b7686e-6f18-47fd-a581-95da396a6980.jpeg" alt="Handle Changelog with Flow" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-08T13:49:50.000Z" title="Created 2023-04-08 13:49:50">2023-04-08</time></div><a class="article-sort-item-title" href="/flow-changelog/" title="Handle Changelog with Flow">Handle Changelog with Flow</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-version/" title="Version handling with Flow"><img src="/images/d9c1cdb7-30dc-4b9b-be3a-94377ef87800.jpeg" alt="Version handling with Flow" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-05T09:15:28.000Z" title="Created 2023-04-05 09:15:28">2023-04-05</time></div><a class="article-sort-item-title" href="/flow-version/" title="Version handling with Flow">Version handling with Flow</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-intro/" title="Maintain a branching model with Flow"><img src="/images/68278b10-1fe2-4a96-a7f5-3253f2542b23.jpeg" alt="Maintain a branching model with Flow" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-02T09:14:00.000Z" title="Created 2023-04-02 09:14:00">2023-04-02</time></div><a class="article-sort-item-title" href="/flow-intro/" title="Maintain a branching model with Flow">Maintain a branching model with Flow</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/icons/george.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">George Pavelka</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" href="https://www.linkedin.com/in/jiripavelka/"><i class="fab fa-linkedin"></i><span>About author</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/academy-alternatives/" title="Internet Guru Academy alternatives"><img src="/images/418f1df7-9364-4a80-a6c6-6e70937de0b7.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Internet Guru Academy alternatives"/></a><div class="content"><a class="title" href="/academy-alternatives/" title="Internet Guru Academy alternatives">Internet Guru Academy alternatives</a><time datetime="2023-07-05T21:01:31.000Z" title="Created 2023-07-05 21:01:31">2023-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/devops-reimplementation/" title="The need for reimplementation"><img src="/images/cd93ddda-d5b4-4257-b383-72c8ce4d39cf.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The need for reimplementation"/></a><div class="content"><a class="title" href="/devops-reimplementation/" title="The need for reimplementation">The need for reimplementation</a><time datetime="2023-07-05T20:09:31.000Z" title="Created 2023-07-05 20:09:31">2023-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/flow-avoiding/" title="Avoiding Git branching models"><img src="/images/b55bf970-b043-493b-aa10-044b61ee79e0.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Avoiding Git branching models"/></a><div class="content"><a class="title" href="/flow-avoiding/" title="Avoiding Git branching models">Avoiding Git branching models</a><time datetime="2023-04-30T21:35:55.000Z" title="Created 2023-04-30 21:35:55">2023-04-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/flow-actions/" title="Flow's action decision tree"><img src="/images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flow's action decision tree"/></a><div class="content"><a class="title" href="/flow-actions/" title="Flow's action decision tree">Flow's action decision tree</a><time datetime="2023-04-16T13:49:31.000Z" title="Created 2023-04-16 13:49:31">2023-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/flow-merging/" title="Merging branches with Flow"><img src="/images/50356bcb-b5bd-4a68-a065-8b8873786730.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Merging branches with Flow"/></a><div class="content"><a class="title" href="/flow-merging/" title="Merging branches with Flow">Merging branches with Flow</a><time datetime="2023-04-12T18:44:29.000Z" title="Created 2023-04-12 18:44:29">2023-04-12</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/user.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/icons/george.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/images/03455fb6-9a0c-478e-a8bc-06f3d4a1ca1d.jpeg')"><nav id="nav"><span id="blog-info"><a href="/" title="Internet Guru Blog"><img class="site-icon" src="/icons/leaf-duo-blue.png"/><span class="site-name">Internet Guru Blog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">Archives</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">Articles - 8</div><div class="article-sort"><div class="article-sort-item year">2023</div><div class="article-sort-item"><a class="article-sort-item-img" href="/academy-alternatives/" title="Internet Guru Academy alternatives"><img src="/images/418f1df7-9364-4a80-a6c6-6e70937de0b7.jpeg" alt="Internet Guru Academy alternatives" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-07-05T21:01:31.000Z" title="Created 2023-07-05 21:01:31">2023-07-05</time></div><a class="article-sort-item-title" href="/academy-alternatives/" title="Internet Guru Academy alternatives">Internet Guru Academy alternatives</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/devops-reimplementation/" title="The need for reimplementation"><img src="/images/cd93ddda-d5b4-4257-b383-72c8ce4d39cf.jpeg" alt="The need for reimplementation" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-07-05T20:09:31.000Z" title="Created 2023-07-05 20:09:31">2023-07-05</time></div><a class="article-sort-item-title" href="/devops-reimplementation/" title="The need for reimplementation">The need for reimplementation</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-avoiding/" title="Avoiding Git branching models"><img src="/images/b55bf970-b043-493b-aa10-044b61ee79e0.jpeg" alt="Avoiding Git branching models" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-30T21:35:55.000Z" title="Created 2023-04-30 21:35:55">2023-04-30</time></div><a class="article-sort-item-title" href="/flow-avoiding/" title="Avoiding Git branching models">Avoiding Git branching models</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-actions/" title="Flow's action decision tree"><img src="/images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg" alt="Flow's action decision tree" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-16T13:49:31.000Z" title="Created 2023-04-16 13:49:31">2023-04-16</time></div><a class="article-sort-item-title" href="/flow-actions/" title="Flow's action decision tree">Flow's action decision tree</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-merging/" title="Merging branches with Flow"><img src="/images/50356bcb-b5bd-4a68-a065-8b8873786730.jpeg" alt="Merging branches with Flow" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-12T18:44:29.000Z" title="Created 2023-04-12 18:44:29">2023-04-12</time></div><a class="article-sort-item-title" href="/flow-merging/" title="Merging branches with Flow">Merging branches with Flow</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-changelog/" title="Handle Changelog with Flow"><img src="/images/73b7686e-6f18-47fd-a581-95da396a6980.jpeg" alt="Handle Changelog with Flow" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-08T13:49:50.000Z" title="Created 2023-04-08 13:49:50">2023-04-08</time></div><a class="article-sort-item-title" href="/flow-changelog/" title="Handle Changelog with Flow">Handle Changelog with Flow</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-version/" title="Version handling with Flow"><img src="/images/d9c1cdb7-30dc-4b9b-be3a-94377ef87800.jpeg" alt="Version handling with Flow" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-05T09:15:28.000Z" title="Created 2023-04-05 09:15:28">2023-04-05</time></div><a class="article-sort-item-title" href="/flow-version/" title="Version handling with Flow">Version handling with Flow</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/flow-intro/" title="Maintain a branching model with Flow"><img src="/images/68278b10-1fe2-4a96-a7f5-3253f2542b23.jpeg" alt="Maintain a branching model with Flow" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2023-04-02T09:14:00.000Z" title="Created 2023-04-02 09:14:00">2023-04-02</time></div><a class="article-sort-item-title" href="/flow-intro/" title="Maintain a branching model with Flow">Maintain a branching model with Flow</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/icons/george.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">George Pavelka</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" href="https://www.linkedin.com/in/jiripavelka/"><i class="fab fa-linkedin"></i><span>About author</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/academy-alternatives/" title="Internet Guru Academy alternatives"><img src="/images/418f1df7-9364-4a80-a6c6-6e70937de0b7.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Internet Guru Academy alternatives"/></a><div class="content"><a class="title" href="/academy-alternatives/" title="Internet Guru Academy alternatives">Internet Guru Academy alternatives</a><time datetime="2023-07-05T21:01:31.000Z" title="Created 2023-07-05 21:01:31">2023-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/devops-reimplementation/" title="The need for reimplementation"><img src="/images/cd93ddda-d5b4-4257-b383-72c8ce4d39cf.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The need for reimplementation"/></a><div class="content"><a class="title" href="/devops-reimplementation/" title="The need for reimplementation">The need for reimplementation</a><time datetime="2023-07-05T20:09:31.000Z" title="Created 2023-07-05 20:09:31">2023-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/flow-avoiding/" title="Avoiding Git branching models"><img src="/images/b55bf970-b043-493b-aa10-044b61ee79e0.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Avoiding Git branching models"/></a><div class="content"><a class="title" href="/flow-avoiding/" title="Avoiding Git branching models">Avoiding Git branching models</a><time datetime="2023-04-30T21:35:55.000Z" title="Created 2023-04-30 21:35:55">2023-04-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/flow-actions/" title="Flow's action decision tree"><img src="/images/3360cdd0-bc7e-44c2-8ce9-fd8a8d60492b.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flow's action decision tree"/></a><div class="content"><a class="title" href="/flow-actions/" title="Flow's action decision tree">Flow's action decision tree</a><time datetime="2023-04-16T13:49:31.000Z" title="Created 2023-04-16 13:49:31">2023-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/flow-merging/" title="Merging branches with Flow"><img src="/images/50356bcb-b5bd-4a68-a065-8b8873786730.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Merging branches with Flow"/></a><div class="content"><a class="title" href="/flow-merging/" title="Merging branches with Flow">Merging branches with Flow</a><time datetime="2023-04-12T18:44:29.000Z" title="Created 2023-04-12 18:44:29">2023-04-12</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>Categories</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/academy/"><span class="card-category-list-name">academy</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/devops/"><span class="card-category-list-name">devops</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/flow/"><span class="card-category-list-name">flow</span><span class="card-category-list-count">6</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/automation/" style="font-size: 1.5em; color: #99a9bf">automation</a> <a href="/tags/development/" style="font-size: 1.5em; color: #99a9bf">development</a> <a href="/tags/git/" style="font-size: 1.5em; color: #99a9bf">git</a> <a href="/tags/cli/" style="font-size: 1.1em; color: #999">cli</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-09-03T15:01:43.109Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2023 By George Pavelka</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><img src="/icons/leaf-duo-white.png" style="height: 1em"/> <a href="https://www.internetguru.io/">Internet Guru</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/automation/" style="font-size: 1.5em; color: #99a9bf">automation</a> <a href="/tags/git/" style="font-size: 1.5em; color: #99a9bf">git</a> <a href="/tags/development/" style="font-size: 1.5em; color: #99a9bf">development</a> <a href="/tags/cli/" style="font-size: 1.1em; color: #999">cli</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-02-07T03:44:47.213Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2025 By George Pavelka</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><img src="/icons/leaf-duo-white.png" style="height: 1em"/> <a href="https://www.internetguru.io/">Internet Guru</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
