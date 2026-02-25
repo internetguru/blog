@@ -18,7 +18,7 @@ description: Advancement in branching models is mostly deterministic. That's why
 
 # Flow's action decision tree
 
-Advancement in branching models is mostly deterministic. That's why the term 'flow' often appears in branching model names. Internet Guru Flow is a CLI tool for developers designed to automate that flow.
+Advancement in git branching models is mostly deterministic. That's why the term 'flow' often appears in branching model names. Internet Guru Flow is a CLI tool for developers designed to automate the flow for developers.
 
 Flow moves forward (flows) on a branching model. By default, it releases the current branch into the appropriate destination. Let's explore how Flow determines the destination and how you can influence it.
 
